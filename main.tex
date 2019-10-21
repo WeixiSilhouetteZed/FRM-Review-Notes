@@ -999,7 +999,61 @@ then, discount cash flows like before and calculate difference.
 
 \chapterimage{ima2}
 \chapter{Properties of Stock Options}
- 
+ \begin{center}
+     \begin{figure}[h!]
+         \centering
+         \includegraphics[scale=0.7]{stockprop.PNG}
+         \caption{Stock Option Properties}
+     \end{figure}
+ \end{center}
+ \begin{theorem}\textbf{Upper Bounds for European and American Option Prices}
+ $$
+ c_{Ame}\leq S_0\hspace{2cm}c_{Eur}\leq S_0
+ $$
+ $$
+ p_{Ame}\leq X\hspace{2cm}p_{Eur}\leq Ke^{-rT}
+ $$
+ \end{theorem}
+ \begin{theorem}\textbf{Upper Bounds for European and American Option Prices}
+ If the stock does not have dividend payments
+ $$
+ \max(S_0-Ke^{-rT},0)\leq c_{Eur}\hspace{2cm}\max(Ke^{-rT}-S_0,0)\leq p_{Eur}
+ $$
+ $$
+ \max(S_0-Ke^{-rT},0)\leq c_{Ame}\hspace{2cm}\max(K-S_0,0)\leq p_{Ame}
+ $$
+ Note that $S_0-Ke^{-rT}\geq S_0-K$, thus, if there is no dividend, American call option should never be exercised early.
+ \end{theorem}
+ \begin{center}
+     \begin{figure}[h!]
+         \centering
+         \includegraphics[scale=0.8]{uloption.PNG}
+         \caption{Stock Option Lower and Upper Bounds}
+     \end{figure}
+ \end{center}
+ \begin{theorem}\textbf{Put-Call Parity Theorem}
+ \textbf{Only holds for European Options!}
+ $$
+ c_{Eur}+Ke^{-rT}=p_{Eur}+Se^{-\delta T}
+ $$
+ \end{theorem}
+ \begin{theorem}\textbf{American Option: Call and Put Relationship}
+ $$
+ S_0-K\leq c_{Ame}-p_{Ame}\leq S_0-Ke^{rT}
+ $$
+ \end{theorem}
+ \begin{theorem}\textbf{Impact of Large Dividend on European Options}
+ Let $D$ be the PV of the large dividend, then the put-call parity becomes
+ $$
+ p_{Eur}+S_0-D=c_{Eur}+Ke^{-rT}
+ $$
+ \end{theorem}
+ \begin{theorem}\textbf{Impact of Large Dividend on American Options}
+ Let $D$ be the PV of the large dividend, then the impact on American option is
+ $$
+ S_0-K-D\leq c_{Ame}-p_{Ame}\leq S_0-Ke^{rT}
+ $$
+ \end{theorem}
 \chapterimage{ima2}
 \chapter{Trading Strategies Involving Options}
  
