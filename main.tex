@@ -1056,10 +1056,47 @@ then, discount cash flows like before and calculate difference.
  \end{theorem}
 \chapterimage{ima2}
 \chapter{Trading Strategies Involving Options}
- 
+\begin{definition}\textbf{Types of Strategies}
+\begin{enumerate}
+    \item \textbf{Protective Put:} long stock, long put
+    \item \textbf{Covered Call:} long stock, short call
+    \item \textbf{Bull Call Spread:} long lower call, short higher call\\
+    The profit$=\max(0,S_T-K_L)-\max(0,S_T-K_H)-c_{L}+c_{H}$
+    \item \textbf{Bear Call Spread:} short lower call, long higher call\\
+    The profit$=\max(0,S_T-K_H)-\max(0,S_T-K_L)+c_{L}-c_{H}$
+    \item \textbf{Butterfly Spreads:} if the strike prices of three call options are $K_L,K_M,K_H$, then to construct a butterfly spread
+    \begin{enumerate}
+        \item buy ${K_H-K_M}$ call with $C_L$
+        \item sell ${K_H-K_L}$ call with $C_M$
+        \item buy ${K_M-K_L}$ call with $C_H$
+    \end{enumerate}
+    \item \textbf{Calendar Spread:} created by transacting in two options that have the same strike price but different expiration dates. This is not symmetric and not linear.
+    \item \textbf{Diagonal Spread:} based on calendar spread with different strike price
+    \item \textbf{Box Spread:} a bull call spread and a bear put spread, this provides a constant payoff and profit. Such arbitrage only exists for European options.
+    \item \textbf{Straddle:} long a put and a call at the same strike price to capture volatility
+    \item \textbf{Strangle:} long a put at $K_L$ and a call at $K_H$ to capture volatility with cheaper cost than Straddle
+    \item \textbf{Strips:} long more call than put at the same strike price
+    \item \textbf{Straps:} long more put than call at the same strike price
+\end{enumerate}
+\end{definition}
+ \begin{center}
+     \begin{figure}[h!]
+         \centering
+         \includegraphics[scale=0.65]{optionstrat.PNG}
+         \caption{Stock Option Strategies}
+     \end{figure}
+ \end{center}
 \chapterimage{ima2}
 \chapter{Exotic Options}
- 
+\begin{definition}\textbf{Why Exotic Option?}\\
+The exotic options are developed to provide a unique hedge for a firm's underlying assets, tax and regulatory purposes, and speculation on future market. 4 factors need to be considered
+\begin{enumerate}
+    \item Will the hedge be effective?
+    \item Cost of strategy?
+    \item Is pricing model needed?
+    \item How is the position reversed?
+\end{enumerate}
+\end{definition}
 \chapterimage{ima2}
 \chapter{Commodity Forwards and Futures}
  
