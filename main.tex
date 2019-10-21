@@ -1,0 +1,1008 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The Legrand Orange Book
+% LaTeX Template
+% Version 2.0 (9/2/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Mathias Legrand (legrand.mathias@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Compiling this template:
+% This template uses biber for its bibliography and makeindex for its index.
+% When you first open the template, compile it from the command line with the 
+% commands below to make sure your LaTeX distribution is configured correctly:
+%
+% 1) pdflatex main
+% 2) makeindex main.idx -s StyleInd.ist
+% 3) biber main
+% 4) pdflatex main x 2
+%
+% After this, when you wish to update the bibliography/index use the appropriate
+% command above and make sure to compile with pdflatex several times 
+% afterwards to propagate your changes to the document.
+%
+% This template also uses a number of packages which may need to be
+% updated to the newest versions for the template to compile. It is strongly
+% recommended you update your LaTeX distribution if you have any
+% compilation errors.
+%
+% Important note:
+% Chapter heading images should have a 2:1 width:height ratio,
+% e.g. 920px width and 460px height.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,fleqn]{report} % Default font size and left-justified equations
+
+%----------------------------------------------------------------------------------------
+
+\input{structure} % Insert the commands.tex file which contains the majority of the structure behind the template
+
+
+
+%%agregué
+
+
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they
+
+
+
+
+\usepackage{graphicx} % paquete que permite introducir imágenes
+
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%%hasta aquí
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begingroup
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\coordinate [below=12cm] (midpoint) at (current page.north);
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering FRM Review Notes\\[15pt] % Book title
+{\Large University of Waterloo}\\[20pt] % Subtitle
+{\huge The One And Only\\Waterloo 76er\\Bill Zhuo}\\[15pt] % Author name
+{\Large Free Material \& Not For Commercial Use}}}; % Disclaimer
+\end{tikzpicture}};
+\end{tikzpicture}
+\vfill
+\endgroup
+
+\newtheorem{lemma}[section]{Lemma}
+\newtheorem{claim}[section]{Claim}
+\newtheorem{practice}[section]{Practice}
+\newcommand\Pro{\textbf{P}}
+\newcommand\F{\textbf{F}}
+\newcommand\f{\textbf{f}}
+\newcommand\M[1]{\textbf{M}\left(#1\right)}
+\newcommand\E[1]{\mathbb{E}\left(#1\right)}
+\newcommand\V[1]{\textbf{Var}\left(#1\right)}
+\newcommand\C[1]{\textbf{Cov}\left(#1\right)}
+\newcommand{\la}{\left|}
+\newcommand{\ra}{\right|}
+\newcommand{\limn}{\lim_{n\rightarrow\infty}}
+\newcommand{\AngA}{\ensuremath{\alpha}}%Define the symbols used for angles
+\newcommand{\AngB}{\ensuremath{\beta}}
+\newcommand{\AngC}{\ensuremath{\theta}}
+\newcommand{\seq}{\{a_{n}\}_{n=1}^{\infty}}
+\newcommand{\ser}{\sum_{n=1}^{\infty}a_n}
+\newcommand{\serN}{\sum_{n=1}^{\infty}}
+\newcommand{\powN}{\sum_{n=0}^{\infty}}
+\newcommand\brac[1]{\left(#1\right)}
+\newcommand\parD[2]{\frac{\partial^{#2}}{\partial {#1}^{#2}}}
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\abs[1]{\left|#1\right|}
+%----------------------------------------------------------------------------------------
+%	COPYRIGHT PAGE
+%----------------------------------------------------------------------------------------
+
+%\newpage
+%~\vfill
+%\thispagestyle{empty}
+
+%\noindent Copyright \copyright\ 2013 John Smith\\ % Copyright notice
+
+%\noindent \textsc{Published by Publisher}\\ % Publisher
+
+%\noindent \textsc{book-website.com}\\ % URL
+
+%\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information
+
+%\noindent \textit{First printing, March 2013} % Printing/edition date
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{ima1} % Table of contents heading image
+
+\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\pagestyle{fancy} % Print headers again
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+
+\part{Financial Markets and Products}
+\chapterimage{ima2} % Chapter heading image
+\chapter{Banks}
+\begin{definition}\textbf{Types of Banks}
+\begin{enumerate}
+    \item \textbf{Commercial Banks} are those that take deposits and make loans
+    \begin{enumerate}
+        \item retail banks-individuals and small firms
+        \item wholesale banks-corporate
+    \end{enumerate}
+    \item \textbf{Investment Banks} are those that assist in raising capital for their customers and advising them on corporate finance matters such as M\&A.
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Major Risks Faced by Banks}
+\begin{enumerate}
+    \item \textbf{Credit Risk} refers to the risk that borrowers may default on loans or other counterparties contracts
+    \item \textbf{Market Risk} refers to the risk of losses from a bank's trading activities
+    \item \textbf{Operational Risk} refers to the possibility of losses arising from external events or failures of a bank's internal control
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Types of Capitals}
+\begin{enumerate}
+    \item \textbf{Regulatory Capital} refers to the amount determined by bank regulators (must maintain this level!)
+    \item \textbf{Economic Capital} refers to the amount of capital that a bank believes is adequate based on its own risk models
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{IB Financing Arrangements}
+\begin{enumerate}
+    \item \textbf{Private Placement:} securities are sold directly to qualified investors with substantial wealth and investment knowledge
+    \item \textbf{Public Offering:} the securities are sold to the investing public at large
+    \begin{enumerate}
+        \item Firm Commitment: the IB agrees to purchase the entire issue and sell
+        \item Best Effort: sell as much as possible with commission
+    \end{enumerate}
+    \item \textbf{Dutch Auction:} reduce price until all bidders have accepted all the shares.
+\end{enumerate}
+\end{definition}
+\begin{remark}
+To avoid conflict of interest, large integrated banks must implement \textbf{Chinese walls} internal control.
+\end{remark}
+\begin{definition}
+\begin{enumerate}
+    \item \textbf{Banking Book} refers to loans made, which are the primary assets of a commercial bank.
+    $$
+    \textbf{BV Value of a loan}=\textbf{Principal}+\textbf{Accrued Interest}
+    $$
+    nonperforming: payments overdue for more than 90 days
+    \item \textbf{Trading Book} refers to assets and liabilities related to a bank's trading activities
+\end{enumerate}
+\end{definition}\textbf{Types of Books}
+
+\begin{definition}\textbf{The Originate-To-Distribute Model}\\
+The model involves making loans and selling them to other parties. Government agencies using this model:
+\begin{enumerate}
+    \item Ginnie Mae (GNMA)
+    \item Fannie Mae (FNMA)
+    \item Freddie Mac (FHLMC)
+\end{enumerate}
+The benefit is increased liquidity but the drawback is the loose lending standards
+\end{definition}
+
+\chapterimage{ima2} % Chapter heading image
+\chapter{Insurance Companies and Pension Plans}
+\begin{definition}\textbf{Categories of Insurance Companies}
+\begin{enumerate}
+    \item \textbf{Life Insurance}
+    \item \textbf{P\&C Insurance}
+    \begin{enumerate}
+        \item Property insurance covers property losses such as fire and theft
+        \item Casualty (liability) insurance covers third-party liability
+    \end{enumerate}
+    \item \textbf{Health insurance}
+    \item \textbf{Risks:}
+    \begin{enumerate}
+        \item Insufficient funds to satisfy poicyholders' claims
+        \item Poor return on investments
+        \item Liquidity risk of investments
+        \item Credit risk
+        \item Operational risk
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+\begin{exercise}\textbf{Breakeven Premium Payments Using Mortality Table}
+
+The relevant interest rate for insurance contracts is 3\% per annum (semiannual
+compounding applies), and all premiums are paid annually at the beginning of the year.
+A \$500,000 term insurance contract is being proposed for a 60-year-old male in average
+health. Assuming that payouts occur halfway throughout the year, calculate the insurance
+company’s breakeven premium for a one-year term and a two-year term.
+
+\textbf{Solution:}
+\begin{enumerate}
+    \item One-year term:
+    $$
+    P_{death,60,1}\times 500,000=(1-P_{survival,60,1})\times 500,000=5,598.50
+    $$
+    $$
+    Premium_{breakeven,1}=\frac{5598.50}{1.015}=5515.76
+    $$
+    \item Two-year term:
+    $$
+    P_{death,60,2}=(1-P_{death,60,1})P_{death,60,1}=0.011874
+    $$
+    $$
+    P_{death,60,2}\times 500,000=5937.27
+    $$
+    the payout is 18 months after
+    $$
+    Premium_{breakeven,2}=\frac{5937.27}{1.015}=5677.91
+    $$
+    \item Take total:
+    $$
+    Y+\frac{P_{survival,60,1}Y}{1.015^2}=Premium_{breakeven,1}+Premium_{breakeven,2}=11193.67
+    $$
+    Solve for $Y=5711.66$.
+\end{enumerate}
+\end{exercise}
+\begin{definition}\textbf{P\&C Insurance Ratios}
+\begin{enumerate}
+    \item \textbf{Loss ratio} for a given year is he percentage of payouts versus premiums generated, usually between 60-80\% and increasing over time
+    \item \textbf{Expense ratio} for a given year is the percentage of expense versus premiums generated, suually between 25-30\% and decreasing over time
+    \item \textbf{Combined ratio} sum of loss and expense ratio
+    \item \textbf{Operating Ratio} for a given year is the combined ratio after dividends less investment income
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Adverse Selection} is where an insurer is unable to differentiate between a good risk and a bad risk
+\end{definition}
+\begin{definition}
+
+\begin{enumerate}
+    \item \textbf{Mortality Risk} refers to the risk of policyholder dying earlier than expected
+    \item \textbf{Longevity Risk} refers to the risk of policyholder living longer than expected
+\end{enumerate}
+\begin{remark}
+If an insurance company has both life annuities and life insurance, then there is a natural hedge of these two risks. Otherwise, can consider reinsurance contracts.
+\end{remark}
+\end{definition}
+
+\begin{definition}\textbf{Types of Pension Plans}
+\begin{enumerate}
+    \item \textbf{Defined Benefits Plans}
+    \item \textbf{Defined Contribution Plans}
+\end{enumerate}
+\end{definition}
+\begin{remark}
+\begin{enumerate}
+    \item Liability insurance is subject to long-tail risk, the risk of legitimate claims being submitted years after the insurance coverage has ended
+    \item Property and Casualty insurance companies typically have a greater amount of equity than a life insurance company
+\end{enumerate}
+\end{remark}
+\chapterimage{ima2}
+\chapter{Mutual Funds and Hedge Funds}
+\begin{definition}\textbf{Types of Mutual Funds}
+$$
+\textbf{NAV}=\frac{\textbf{fund assets}-\textbf{fund liabilities}}{\textbf{total shares outstanding}}
+$$
+\begin{enumerate}
+    \item \textbf{Open-ended Mutual Funds}: most common, trades at the fund's \textbf{net asset value}, which is essentially the sum of all assets owned minus any liabilities of the fund then divided by shares outstanding.
+    \begin{enumerate}
+        \item Poor price visibility, market order only
+        \item Taxes passed onto investors
+        \item Fees required
+        \begin{enumerate}
+            \item Management fee: as high as 2.5-3.0\%
+            \item Advertising fee: 0.0-1.0\%
+            \item Sales charge:
+            \begin{enumerate}
+                \item Front-end load: charge when the asset is sold
+                \item Back-end load: charge when the investor leaves a fund
+            \end{enumerate}
+        \end{enumerate}
+    \end{enumerate}
+    \item \textbf{Closed-End Mutual Funds}
+    \begin{enumerate}
+        \item Niche investment
+        \item Number of funds remains static and can be purchased from other investors
+        \item Cannot sell the fund back to the company but need to find next investor
+        \item Transact at a price other than NAV with discount or premium
+    \end{enumerate}
+    \item \textbf{Exchange-Traded Funds}
+    \begin{enumerate}
+        \item Like a daily traded closed-end funds with options available
+        \item Tremendous visibility
+        \item Low management fee
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+
+\begin{definition}\textbf{Hedge Funds}
+
+More complex compensation struture centered around incentive ees, \textbf{2 plus 20\%}, 2\% of all assets plues an additional 20\% of all profits above a specified benchmark. Safeguards for investors:
+\begin{enumerate}
+    \item Hurdle Rate: benchmark that must be beaten
+    \item High-water mark clause: previous losses must first be recouped and hurdle rates surpassed before incentive fees once again apply
+    \item Clawback clause: enables investors to remain a portion of previously paid incentive fees to offset investment losses
+\end{enumerate}
+\end{definition}
+\begin{exercise}\textbf{Calculate a Hedge Fund Manager's Expected Return}
+
+What is the expected return to a hedge fund if the fund uses a standard 2 and 20
+incentive fee structure with an investment that has a 35\% probability of making
+55\% and a 65\% probability of losing 45\%?
+
+\textbf{Solution}
+$$
+P(W)(2\%+0.2\times(W-2\%))+P(L)\times 2\%
+$$
+$$
+=0.35(2\%+0.2(55\%-2\%))+0.65\times 2\%=5.71\%
+$$
+\end{exercise}
+
+\begin{definition}\textbf{Hedge Fund Strategies}
+\begin{enumerate}
+    \item \textbf{Long/Short Equity}
+    \item \textbf{Dedicated Short}
+    \item \textbf{Distressed Securities}: high return if they can turn things around
+    \item \textbf{Merger Arbitrage}: cash deals and stock deals
+    \item \textbf{Convertible Arbitrage}: utilize convertible bond
+    \item \textbf{Fixed Income Arbitrage}
+    \item \textbf{Emerging Market}: developing country securities or American Depository Receipts (ADRs)
+    \item \textbf{Global Macro:} global macro trend that is in disequilibrium
+    \item \textbf{Managed Futures:} future of commodity prices
+\end{enumerate}
+\end{definition}
+
+\begin{definition}\textbf{Hedge Fund Performance and Measurement Bias}
+\begin{enumerate}
+    \item \textbf{Meansurement Bias:} report good, avoid bad
+    \item \textbf{Backfill Bias:} use previous return to boost return rate
+    \item \textbf{Protection during period of stock market volatility}
+\end{enumerate}
+\end{definition}
+\begin{remark}
+\begin{enumerate}
+    \item Mutual funds must offer immediate access to withdrawals from their fund as an SEC requirement. Whereas, the hedge funds have advance notification and lock-up periods.
+\end{enumerate}
+\end{remark}
+
+\chapterimage{ima2}
+\chapter{Option, Futures, and Other Derivatives}
+\begin{definition}\textbf{Derivative Markets}
+\begin{enumerate}
+    \item \textbf{Open outcry system/electronic trading system:} like NASDAQ
+    \item \textbf{OTC:} customized
+    \item \textbf{Traditional Exchange}
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Basics of Derivative Securities}
+\begin{enumerate}
+    \item \textbf{Option Contract} is a contract that, in exchange for the otpion price, gives the option buyer the right, but not obligation, to buy/sell an asset at the exercise price from/to the option seller within a specified time period
+    \item \textbf{Forward Contract} is a contract that specifies the price and quantity of an asset to be delivered sometime in the future---foreign currency risk hedge
+    \item \textbf{Futures contract} is a more formalized, legally binding agreement to buy/sell a commodity/financial instrument in a pre-designated month in the future, at a price agreed upon today---exchange traded
+\end{enumerate}
+\end{definition}
+\begin{theorem}\textbf{Call Option Payoff/Profit}\\
+For call option buyer
+$$
+C_T=\max(0,S_T-X)
+$$
+$$
+\textbf{Profit}=C_T-C_0
+$$
+where $S_T$ is the stock price at maturity and $X$ is the strike price and $C_0$ is the call premium. \textbf{The put version is analogous}
+\end{theorem}
+\begin{theorem}\textbf{Forward Contract Payoff}\\
+For a forward contract long position
+$$
+\textbf{Payoff}=S_T-K
+$$
+where $S_T$ is the spot price at maturity and $K$ is the delivery price. \textbf{The case for a future is similar}
+\end{theorem}
+\begin{exercise}\textbf{How to use forward contracts to hedge?}
+
+Suppose that a company based in the United States will receive a payment o f €10M in
+three months. The company is worried that the euro will depreciate and is contemplating
+using a forward contract to hedge this risk. Compute the following:
+\begin{enumerate}
+    \item The value of the €10M in U.S. dollars at maturity given that the company hedges the
+exchange rate risk with a forward contract at 1.25 \$/\EUR{}.
+    \item The value o f the €10M in U .S. dollars at maturity given that the company did not
+hedge the exchange rate risk and the spot rate at maturity is 1.2 \$/\EUR{}.
+\end{enumerate}
+\end{exercise}
+
+\begin{remark}\textbf{Speculative Strategies}
+Derivatives create significant leverage for the speculators.
+\end{remark}
+
+\chapterimage{ima2}
+\chapter{Mechanics of Futures Markets}
+$$
+\textbf{Open Interest}=\textbf{Total \# Long Position}=\textbf{Total \# Short Position}
+$$
+\begin{definition}\textbf{Futures Contract Characteristics}
+\begin{enumerate}
+    \item Quality of the underlying asset
+    \item Contract size
+    \item Delivery location
+    \item Delivery time
+    \item Price quotation and tick size: tick size is the minimum price fluctuation for the contract
+    \item Daily price limits:limit down (cannot go down further), limit up (cannot go up further)
+    \item Position limits: maximum number of contracts that a speculator may hold
+\end{enumerate}
+\end{definition}
+\begin{theorem}\textbf{Future/Spot Convergence}\\
+$$
+\textbf{Basis}=\textbf{Spot Price}-\textbf{Futures Price}
+$$
+when $T$ approaches maturity, basis will converge to $0$. Otherwise, arbitrage exists.
+\end{theorem}
+\begin{definition}\textbf{Operation of Margins}
+\begin{enumerate}
+    \item \textbf{Margin} is cash or highly liquid collateral placed in an account to ensure that any trading losses will be met.
+    \item \textbf{Marking to market} is the daily procedure of adjusting the margin account balance for daily movements in the future price.
+    \item \textbf{Initial Margin}
+    \item \textbf{Maintenance Margin:} lower than this, there will be a margin call
+    \item \textbf{Variation Margin:} the amount necessary to bring the margin account back to the initial margin amount
+\end{enumerate}
+\end{definition}
+\begin{exercise}\textbf{Margin Trading}\\
+Let’s return to our investor with the long gold contract. The investor entered the position
+at \$993.60. Each contract controls 100 troy ounces for a current market value of \$99,360.
+Assume that the initial margin is \$2,500, the maintenance margin is \$2,000, and the
+futures price drops to \$991.00 at the end of the first day and \$985.00 on the end of the
+second day. Compute the amount in the margin account at the end of each day for the
+long position and any variation margin needed.
+
+\textbf{Solution}
+\begin{enumerate}
+    \item First day: amount of loss
+    $$
+    2.6\times 100=260<2500-2000=500
+    $$
+    No margin call, the margin balance is 2240.
+    \item Second day: amont of loss
+    $$
+    6\times 100=600>2240-2000=240
+    $$
+    There is a margin call and the current balance is 1640, the variation margin is $2500-1640=860$.
+\end{enumerate}
+\end{exercise}
+\begin{definition}\textbf{OTC Markets}
+\begin{enumerate}
+    \item \textbf{Collateralization} is basically a marked to market feature for the OTC market where any loss is settled in cash at the end of the trading day. 
+    \item In practice, the current OTC
+market is a mix of both bilateral agreements and transactions dealing with one or more
+clearinghouses. \textbf{Why clearinghouse?}
+    \begin{enumerate}
+        \item Automatic posting of collateral
+        \item Reduction of financial system credit risk
+        \item Increase transparaency of OTC trades
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+\begin{definition}
+\begin{enumerate}
+    \item \textbf{Settlement price} is the average of the prices of the trades during the last period of trading
+    \item \textbf{Normal Market:} increasing settlement prices
+    \item \textbf{Inverted Market:} decreasing settlement prices
+\end{enumerate}
+\end{definition}
+\begin{definition}
+\textbf{The Delivery Process of A Future Contract}
+\begin{enumerate}
+    \item Delivering the goods to the clearing house
+    \item Cash-settlement contract
+    \item Reverse/offsetting
+    \item Exchange for physicals: between traders, not the clearinghouse
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Types of Orders}
+\begin{enumerate}
+    \item \textbf{Market order}
+    \item \textbf{Discretionary order}: delayed market order by the broker
+    \item \textbf{Limit order}
+    \item \textbf{Stop orders}
+    \item \textbf{Time-of-day order}
+    \item \textbf{Good-till-canceled order}
+    \item \textbf{Fill-or-kill order}: must execute immediately or the trade will not take place.
+\end{enumerate}
+\end{definition}
+\begin{remark}
+\begin{enumerate}
+    \item Commodity Futures Trading Commission (CFTC) is responsible for regulating futures markets
+    \item Hedging accounting specifies that gains/losses from a hedging instrument be recognized in the same period as gains/losses from the asset being hedged
+\end{enumerate}
+\end{remark}
+\chapterimage{ima2}
+\chapter{Hedging Strategies Using Futures}
+\begin{definition}\textbf{Hedging With Futures}
+\begin{enumerate}
+    \item \textbf{Short Hedge} short a future contract to hedge against a price decrease in the existing long position
+    \item \textbf{Long Hedge} long a future contract to hedge against an increase in price in the existing short position
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Basic Risk} exists if one of the following is true
+\begin{enumerate}
+    \item the asset in the existing position is often not the same as that underlying the futures
+    \item the hedging horizon may not match perfectly with the maturity of the futures contract
+\end{enumerate}
+\end{definition}
+\begin{remark}
+To minimize basis risk, hedgers should select asset that is highly correlated to the spot position and contract maturity that is closet to the hedging horizon. Liquidity must be considered as well.
+\end{remark}
+\begin{definition}\textbf{Sources of Basis Risks}
+\begin{enumerate}
+    \item Interruption in the convergence of the futures and spot prices
+    \item Changes in the cost of carry
+    \item Imperfect matching between the cash asset and the hedge asset: maturity/duration mismatch, liquidity mismatch, credit risk mismatch
+\end{enumerate}
+\end{definition}
+\begin{theorem}\textbf{Optimal Hedge Ratio}\\
+A hedge ratio is the ratio of the size of the futures position relative to the spot position. The \textbf{optimal hedge ratio}, which minimizes the variance of the combined hedge position, is defined as follows:
+$$
+HR=\rho_{S,F}\frac{\sigma_S}{\sigma_F}=\beta_{S,F}=\frac{\textbf{Cov}_{S,F}}{\sigma_F^2}=\frac{\textbf{Cov}_{S,F}}{\sigma_S\sigma_F}\frac{\sigma_S}{\sigma_F}
+$$
+where $S$ is the spot position and the $F$ is the future position.
+\end{theorem}
+\begin{remark}
+This is optimal since it can minimize the variance. The \textbf{effectiveness of the hedge} measures the variance that is reduced by implementing the optimal hedge. We can measure it by $\rho_{S,F}^2$
+\end{remark}
+
+\begin{theorem}\textbf{Hedging With Stock Index Futures}
+
+$$
+\textbf{\# of Contracts}=\beta_{port}\times\frac{\textbf{portfolio value}}{\textbf{value of future contract}}=\beta_{port}\times\frac{\textbf{portfolio value}}{\textbf{future price}\times\textbf{contract multiplier}}
+$$
+\end{theorem}
+\begin{exercise}\textbf{Tailing the Hedge}
+
+Suppose that you would like to make a tailing the hedge adjustment to the number of
+contracts needed in the previous example. Assume that when evaluating the next daily
+settlement period you find that the S\&P 300 spot price is 1,095 and the futures price is
+now 1,160. Determine the number o f S\&P 500 contracts needed after making a tailing
+the hedge adjustment.
+
+\textbf{Solution}
+
+We need to adjust the formula to spot-to-future ratio
+$$
+\textbf{\# of Contracts}=\beta_{port}\times\frac{\textbf{portfolio value}}{\textbf{future price}\times\textbf{contract multiplier}}\times\frac{\textbf{spot price}}{\textbf{future price}}
+$$
+$$
+=1.4\times\frac{20000000}{1150\times 250}\times\frac{1095}{1160}=92
+$$
+\end{exercise}
+
+\begin{theorem}\textbf{Adjusting Portfolio Beta}\\
+$$
+\textbf{\# of Contracts}=(\beta^*-\beta)\frac{P}{A}
+$$
+where $P$ is the portfolio value, $A$ is the value of the underlying asset, $\beta^*$ is the target beta and $\beta$ is current portfolio beta
+\end{theorem}
+\begin{remark}
+Due to different maturities of the spot and future, the hedger needs to introduce a new future to roll the hedge forward and this will get rid of the old basis risk but introduce a new basis risk
+\end{remark}
+\chapterimage{ima2}
+\chapter{Interest Rates}
+\begin{definition}\textbf{Types of Rates}
+\begin{enumerate}
+    \item Treasury rates: risk-free rates
+    \item LIBOR
+    \item Repo rates: implied rate on a repurchase agreement
+\end{enumerate}
+\end{definition}
+\begin{remark}\textbf{We are ignoring a bunch of ACTSC231 stuff here. BORING.}
+\end{remark}
+\begin{theorem}\textbf{Boostrap Spot Rate Curves}
+
+Given a set of treasury price $P_1,\dots,P_n$ and related periods $t_1,\dots,t_n$, then we calculate $z_{t_1},\dots,z_{t_n}$ one-by-one.
+
+\end{theorem}
+\begin{definition}\textbf{Forward Rate Agreements} is a forward contract obligating two parties to agree that a certain interest rate will apply to the principal amount during a specified future time. 
+\end{definition}
+\begin{theorem}\textbf{FRA Valuation}
+\begin{align*}
+    &PV_{rec,R_K}=L(R_K-R_F)(T_2-T_1)e^{-R_2T_2}\\
+    &PV_{pay,R_K}=L(R_F-R_K)(T_2-T_1)e^{-R_2T_2}
+\end{align*}
+where $L$ is the principal, $R_K$ is the annualized rate on $L$, $R_F$ is the forward rate between $T_1$ and $T_2$ continuous compounding period. 
+\end{theorem}
+\begin{exercise}\textbf{Computing the Value of an FRA}
+
+Suppose the 3-month and 6-month LIBOR spot rates are 4\% and 5\%, respectively
+(continuously compounded rates). An investor enters into an FRA in which she will
+receive 8\% (assuming quarterly compounding) on a principal of \$5,000,000 between
+months 3 and 6. Calculate the value of the FRA.
+
+\textbf{Solution}
+
+$$
+e^{0.25R_{F,c}}=\frac{e^{0.5\cdot 0.05}}{e^{0.25\cdot 0.04}}\to R_{F,c}=0.06=6\%
+$$
+$$
+R_{F,quarter}=4\left(e^{\frac{0.06}{4}}-1\right)=0.060452=6.05\%
+$$
+$$
+PV_{rec,R_K}=5000000(8\%-6.05\%)(0.5-0.25)e^{-0.05\times 0.5}=23773
+$$
+\end{exercise}
+\begin{definition}\textbf{Duration}\\
+The duration of a bond is the cash flow weighted average time until the cash flows ont the bond are received. Under continuous compounding:
+$$
+D=\sum_{i=1}^nt_i\left(\frac{c_ie^{-yt_i}}{P_{Bond}}\right)
+$$
+where $t_i$ is the time until cash flow $c_i$ is to be received and $y$ is the continuously compound yield.
+\end{definition}
+\begin{theorem}\textbf{Approximation of Bond Price Change}
+
+Under a parallel shift in the yield curve of $\Delta y$, we have
+$$
+\frac{\Delta P_{Bond}}{P_{Bond}}=-D\times\Delta y
+$$
+\end{theorem}
+\begin{definition}
+
+\begin{enumerate}
+    \item \textbf{Modified Duration:}
+    $$
+    D^*=\frac{D}{1+\frac{y}{m}}
+    $$
+    where $m$ is the number of compounding periods per year
+    \item \textbf{Dollar Duration}:
+    $$
+    \$D=D^*\times P_{Bond}
+    $$
+\end{enumerate}
+\end{definition}
+\begin{theorem}Improved Approximation Using Convexity
+$$
+\Delta P_{Bond}= P_{Bond}\left(-D\Delta y+\frac{1}{2}C(\Delta y)^2\right)
+$$
+\end{theorem}
+\begin{proposition}\textbf{Theories of The Term Structure}
+\begin{enumerate}
+    \item \textbf{Expectations Theory}: $R_F=\mathbb{E}(Z_t)$
+    \item \textbf{Market Segmentation Theory}: different maturity sectors yield different supply and demand
+    \item \textbf{Liquidity Preference Theory}: most depositors prefer short-term liquid deposits
+\end{enumerate}
+
+\end{proposition}
+\chapterimage{ima2}
+\chapter{Determination of Forward and Future Prices}
+\begin{definition}
+\begin{enumerate}
+    \item \textbf{Investment Asset} is an asset that is held for the purpose of investing
+    \item \textbf{Consumption Asset} is an asset that is held for the purpose of consumption
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Rules of Short Selling}
+\begin{enumerate}
+    \item The short seller must pay all dividends due to the lender of the security
+    \item The short seller must deposit collateral to guarantee the eventual repurchase of the security
+\end{enumerate}
+\end{definition}
+\begin{exercise}\textbf{Net profit of a short sale}
+
+Assume that trader Alex Rodgers sold short XYZ stock in March by borrowing 200
+shares and selling them for \$50/share. In April, XYZ stock paid a dividend of \$2/share.
+Calculate the net profit from the short sale assuming Rodgers bought back the shares
+in June for \$40/share in order to replace the borrowed shares and close out his short position.
+
+\textbf{Solution}
+
+Initial revenue=$200\times 50=10000$\\
+Get rid of dividend=$2\times 200=400$\\
+Return the stock=$40\times 200=8000$\\
+Total Profit=$10000-400-8000=1600$
+\end{exercise}
+\begin{definition}\textbf{Future vs. Forwards}
+\begin{enumerate}
+    \item Similarities:
+    \begin{enumerate}
+        \item Deliverable or cash-settlement
+        \item Priced to have zero value at entrance
+    \end{enumerate}
+    \item Differences:
+    \begin{enumerate}
+        \item Future:
+        \begin{enumerate}
+            \item Trade on organized exchanges
+            \item highly standardized
+            \item A single clearinghouse is the counterparty to all futures contracts
+            \item Government regulated market
+        \end{enumerate}
+        \item Forward:
+        \begin{enumerate}
+            \item Private contracts not on an exchange
+            \item customized contracts
+            \item Forwards are contracts with the originating counterparty
+            \item Forward contracts are usually not regulated
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}\textbf{Forward Pricing}
+
+Under the following assumptions:
+\begin{enumerate}
+    \item No transaction costs or short-sale restrictions
+    \item Same tax rates on all net profits
+    \item Borrowing and lending at the risk-free rate
+    \item Arbitrage opportunities are exploited as they arise
+\end{enumerate}
+No interim cash flows or carrying costs
+$$
+F_0=S_0e^{rT}
+$$
+If $I$ is the PV of all cash flows over the $T$ years, we have
+$$
+F_0=(S_0-I)e^{rT}
+$$
+If there is a dividend on the stock with $\delta$ continuous return
+$$
+F_0=S_0e^{(r-\delta)T}
+$$
+\end{theorem}
+\begin{theorem}\textbf{Value of A Forward Contract}
+
+For the buyer of the contract
+$$
+S_0e^{-\delta T}-I-Ke^{rT}
+$$
+where $K$ is the obligated delivery price after inception
+\end{theorem}
+\begin{theorem}\textbf{Currency Futures}
+$$
+F_0=S_0e^{(r-r_f)T}
+$$
+\end{theorem}
+\begin{theorem}\textbf{Commodity Futures}
+$$
+F_0=S_0e^{(r+u-y)T}
+$$
+where $u$ is the storage cost and $y$ is the convenience yield.
+\end{theorem}
+\begin{definition}
+\begin{enumerate}
+    \item \textbf{Backwardation} refers to a situation where the futures price is below th spot price. Thre must be a significant benefit to holding the asset
+    \item \textbf{Contango} refers to a situation where the futures price is above the spot price. If there are no benefits to holding the asset
+\end{enumerate}
+\end{definition}
+\chapterimage{ima2}
+\chapter{Interest Rate Futures}
+ \begin{definition}\textbf{Day Count Convention}\\
+ $$
+ \textbf{Accrued Interest}=\textbf{Coupon}\times\frac{\textbf{\# of days from last coupon to the settlement date}}{\textbf{\# of days in coupon period}}
+ $$
+ \begin{enumerate}
+     \item US Treasury bonds use actual/actual
+     \item US corporate and municipal bonds use 30/360
+     \item US money market (T-Bill) use actual/360
+ \end{enumerate}
+ \end{definition}
+ 
+\begin{definition}\textbf{Quotation of T-Bonds}\\
+Quoted relative to \$100 par amount in dollars and 32nds. 
+$$
+95-05\hspace{2cm}95\frac{5}{32}\hspace{2cm}95.15625
+$$
+$$
+\textbf{Cash Price}=\textbf{Quoted Price}+\textbf{Accrued Interest}
+$$
+The cash price is also known as the dirty price while the quoted price is the clean price.
+\end{definition} 
+ 
+ \begin{definition}\textbf{Quotation for T-Bills}\\
+ We use actual/360 and $Y$ as the cash price and $n$ days to maturity, then
+ $$
+ \textbf{T-Bill discount rate}=\frac{360}{n}(100-Y)
+ $$
+ \end{definition}
+\begin{definition}\textbf{Treasury Bond Futures}
+For the short position to deliver, the cash received is
+$$
+\textbf{cash received}=(QFP\times CF)+AI
+$$
+where QFP is the quoted futures price, CF is the conversion factor, and AI is the accrued interest
+$$
+CF=\frac{\textbf{discounted price of a bond}-AI}{\textbf{face value}}
+$$
+\end{definition}
+ \begin{theorem}\textbf{Cheapest-to-Deliver Bond}\\
+ $$
+ \textbf{CTD Bond}=\textbf{Quoted Bond Price}-(QFP\times CF)
+ $$
+ we take the minimum!
+ \end{theorem}
+ \begin{remark}CTD Bonds Behaviours:
+ \begin{enumerate}
+     \item When yield $>6\%$, CTD bonds tend to be low-coupon, long-maturity bonds
+     \item When yield $<6\%$, CTD bonds tend to be high-coupon, short-maturity bonds
+     \item When the yield curve is upward sloping, CTD bonds tend to have longer maturities
+     \item When the yield curve is downward sloping, CTD bonds tend to have shorter maturities
+ \end{enumerate}
+ \end{remark}
+  \begin{exercise}\textbf{Theoretical Futures Price}
+ 
+Suppose that the CTD bond for a Treasury bond futures contract pays 10\% semiannual
+coupons. This CTD bond has a conversion factor of 1.1 and a quoted bond price of
+100. Assume that there are 180 days between coupons and the last coupon was paid 90
+days ago. Also assume that Treasury bond futures contract is to be delivered 180 days
+from today, and the risk-free rate of interest is 3\%. Calculate the theoretical price for this
+T-bond futures contract.
+ 
+ 
+ \textbf{Solution}
+ \begin{enumerate}
+     \item Step 1: calculate the dirty price of the bond
+     $$
+     \textbf{Dirty Price}=100+5\times\frac{90}{180}=102.5
+     $$
+     \item Step 2: calculate the cash future price, since this is a treasury bond, we use actual/actual
+     $$
+     F_0=(102.5-5e^{-0.03\times(90/365)})e^{0.03(180/365)}=98.99
+     $$
+     \item Step 3: calculate the quoted futures price at delivery
+     $$
+     98.99-5\times\frac{90}{180}=96.49
+     $$
+     \item Step 4: calculate theoretical price using conversion factor
+     $$
+     QFP=\frac{96.49}{1.1}=87.72
+     $$
+ \end{enumerate}
+ \end{exercise}
+ \begin{definition}\textbf{Eurodollar Futures}
+ 
+ The 3-month eurodollar futures contract trades on Chicago Mercantile Exchange (CME). One \textbf{tick} is \$25 per \$1 million contract. if $Z$ is the quoted price, the contract price is
+ $$
+ \textbf{Eurodollar future price}=10000[100-(0.25)(100-Z)]
+ $$
+ \end{definition}
+
+\begin{theorem}\textbf{Convexity Adjustment}\\
+$$
+\textbf{Forward Rate Implied By Futures}=(100-Z)\%
+$$
+$$
+\textbf{Actual Forward Rate}=\textbf{Forward Rate Implied By Futures}-\frac{1}{2}\sigma^2T_1T_2
+$$
+where $\sigma$ is the annual sd of the 90-LIBOR, $T_1$ is the maturity of the future contract and $T_2$ is 90 days of the underlying contract.
+\end{theorem}
+\begin{theorem}\textbf{Duration-Based Hedging}\\
+To create a combined position taht does not change in value when yields change by small amount.
+$$
+N=-\frac{P\times D_P}{F\times D_F}
+$$
+\end{theorem}
+\begin{exercise}
+Assume there is a 6-month hedging horizon and a portfolio value of \$100 million. Further
+assume that the 6-month T-bond contract is quoted at 105—09, with a contract size of
+\$100,000. The duration of the portfolio is 10, and the duration o f the futures contract is
+12. Outline the appropriate hedge for small changes in yield.
+
+\textbf{Solution}
+$$
+N=-\frac{100000000\times 10}{105\frac{9}{32}\times 0.01\times 100000\times 12}=-791.53
+$$
+Thus, the manager should short 792 contracts.
+\end{exercise}
+
+\chapterimage{ima2}
+\chapter{Swaps}
+\begin{definition}\textbf{Financial Intermediaries in Swap Markets}
+\begin{enumerate}
+    \item Swaps typically require no payment by either party at initiation
+    \item Swaps are custom instruments
+    \item Swaps are not traded in any organized secondary market
+    \item Swaps are largely unregulated
+    \item Default risk is an important aspect of the contract
+    \item Most participants in the swaps market are large institutions
+    \item Individuals are rarely swap markets participants
+\end{enumerate}
+\end{definition}
+\begin{theorem}\textbf{Discount Rate for Swaps}\\
+Implied forward rate is used to produce LIBOR, so under continuous compounding
+$$
+R_{forward}=R_2+(R_2-R_1)\frac{T_1}{T_2-T_1}
+$$
+\end{theorem}
+\begin{theorem}\textbf{IRS Value}
+$$
+V_{fltrec}=PV_{flt}-PV_{fix}
+$$
+$$
+V_{fixrec}=PV_{fix}-PV_{flt}
+$$
+\end{theorem}
+\begin{remark}
+\begin{enumerate}
+    \item Bond methodology use the fixed rate to calculate floating rate payment right away
+    \item FRA methodology use Theorem 10.0.1 to calculate each floating rate payment and discount accordingly
+\end{enumerate}
+\end{remark}
+\begin{theorem}\textbf{Fixed-for-fixed Currency Swap}
+$$
+V_{swap}(USD)=B_{USD}-(S_0\times B_{GBP})
+$$
+\end{theorem}
+\begin{theorem}\textbf{FRA Currency Swap}
+We first calculate the forward rates using
+$$
+F_t=S_0e^{(r-r_f)t}
+$$
+then, discount cash flows like before and calculate difference.
+\end{theorem}
+\begin{definition}\textbf{Other Types of Swaps}
+\begin{enumerate}
+    \item \textbf{Equity Swap} the return on a stock, a portfolio, or a stock index is paid each period by one party in return for a fixed-rate or floating-rate payment
+    \item \textbf{Swaption} is an onption which gives the holder the right to enter into an interest rate swap
+    \item \textbf{Volatility swap} involves the exchanging of volatility based on notional principal
+\end{enumerate}
+\end{definition}
+\chapterimage{ima2}
+\chapter{Mechanics of Option Markets}
+
+\chapterimage{ima2}
+\chapter{Properties of Stock Options}
+ 
+\chapterimage{ima2}
+\chapter{Trading Strategies Involving Options}
+ 
+\chapterimage{ima2}
+\chapter{Exotic Options}
+ 
+\chapterimage{ima2}
+\chapter{Commodity Forwards and Futures}
+ 
+\chapterimage{ima2}
+\chapter{Exchanges, OTC, Derivatives, DPCs and SPVs}
+ 
+\chapterimage{ima2}
+\chapter{Basic Principles of Central Clearing}
+ 
+\chapterimage{ima2}
+\chapter{Risks Caused by CCPs}
+ 
+\chapterimage{ima2}
+\chapter{Foreign Exchange Risk}
+ 
+\chapterimage{ima2}
+\chapter{Corporate Bonds}
+
+\chapterimage{ima2}
+\chapter{Mortgages and MBS}
+ 
+ 
+\end{document}
