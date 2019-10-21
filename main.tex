@@ -1106,7 +1106,38 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
 \end{definition}
 \begin{definition}\textbf{Types of Exotic Options}
 \begin{enumerate}
-    \item \textbf{Gap Options:} two strike prices, $X_2$ is referred as the trigger price
+    \item \textbf{Gap Options:} two strike prices, $X_2$ is referred as the trigger price\\
+    For a \textbf{gap call Options:} $X_2>X_1$, when $X_2$ is reached, the payoff is $S_T-X_1$\\
+    For a \textbf{gap put Options:} $X_2<X_1$, when $X_2$ is reached, the payoff is $X_1-S_T$
+    \item \textbf{Forward Start Options} are options that begin their existence at some time in the future
+    \item \textbf{Compound Options:} coc,cop,poc,pop
+    \item \textbf{Chooser Options:} choose to be a put or a call
+    \item \textbf{Barrier options:} down-and-in, down-and-out, up-and-in, up-and-out
+    \begin{enumerate}
+        \item Usually cheaper
+        \item Vega usually always positive for standard options, but maybe negative for barrier options
+        \item (down-and-in)+(down-and-out)=standard option=(up-and-in)+(up-and-out)
+    \end{enumerate}
+    \item \textbf{Binary Options:}\\
+    \textbf{cash-or-nothing call} pays fixed amount $Q$
+    $$
+    c_{cash}=Qe^{-rT}N(d_2)
+    $$
+    \textbf{asset-or-nothing call} pays the value of the stok when the contract is initiated if the stock price ends up above the strike price at expiration
+    $$
+    c_{asset}=S_0e^{-\delta T}N(d_1)
+    $$
+    \item \textbf{Shout Options:} allows the owner to pick a date when he shouts to the option seller, the owner receives the $\max(shout,K)$
+    \item \textbf{Asian Options:} average price or average strike
+    \item \textbf{Exchange Options:} one asset for another asset
+    \item \textbf{Basket options:} underlying asset is a basket of assets (rainbow options)
+    \item \textbf{Volatility Swap/Variance Swap}: exchange volatility/variance based on a notional value
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Option Replication}
+\begin{enumerate}
+    \item Dynamic Options Replication: requires frequent trading, which is really costly
+    \item Statis options replication: a short portfolio of actively traded options that approximates the option position to be hedged is constructed
 \end{enumerate}
 \end{definition}
 \chapterimage{ima2}
