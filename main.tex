@@ -434,9 +434,9 @@ three months. The company is worried that the euro will depreciate and is contem
 using a forward contract to hedge this risk. Compute the following:
 \begin{enumerate}
     \item The value of the €10M in U.S. dollars at maturity given that the company hedges the
-exchange rate risk with a forward contract at 1.25 \$/\EUR{}.
+exchange rate risk with a forward contract at 1.25 \$/\EUR.
     \item The value o f the €10M in U .S. dollars at maturity given that the company did not
-hedge the exchange rate risk and the spot rate at maturity is 1.2 \$/\EUR{}.
+hedge the exchange rate risk and the spot rate at maturity is 1.2 \$/\EUR.
 \end{enumerate}
 \end{exercise}
 
@@ -1142,7 +1142,73 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
 \end{definition}
 \chapterimage{ima2}
 \chapter{Commodity Forwards and Futures}
+ \begin{theorem}\textbf{Forward Price}
+ $$
+ F_{0,T}=S_0e^{(r-\delta+\lambda)T}
+ $$
+ where $\delta$ is the leasing rate and $\lambda$ is the storage cost.\\
+ A synthetic commodity forward price can be derived by combining a long position on a commodity forward, $F_{0,T}$ and a long zero-coupon bond that pays $F_{0,T}$ at time $T$.
+ \end{theorem}
+ \begin{exercise}\textbf{Cash-and-carry arbitrage}
+ \begin{center}
+     \includegraphics[scale=0.42]{commfor.PNG}
+ \end{center}
+ \end{exercise}
+  \begin{definition}
+ \begin{enumerate}
+     \item \textbf{Contango:} upward sloping forward curve with $r>\delta$
+     \item \textbf{Backwardation:} downward sloping forward curve with $r<\delta$
+ \end{enumerate}
+ \end{definition}
+ \begin{definition}\textbf{Convenience Yield:} The convenience yield is only relevant when a commodity is stored (i.e., in a carry market).A convenience yield cannot be earned by the average investor who does not have a business reason for holding the commodity. Thus, we have a range for the $F_{0,T}$
+ $$
+ S_{0}e^{(r+\lambda-c)T}\leq F_{0,T}\leq S_{0}e^{(r+\lambda)T}
+ $$
+ \end{definition}
+ \begin{remark}Arbitrage-free conditions dictate that continuous lease rates should be equal to either
  
+ \begin{enumerate}
+     \item Risk-adjusted required ror on commodity investment minus the expected price appreciation of the commodity
+     $$
+     \delta=\alpha-\frac{1}{T}[E(S_T)/S_0]
+     $$
+     \item The risk-free rate minus the forward premium on the commodity
+     $$
+     \delta=r-\frac{1}{T}[F_{0,T}/S_0]
+     $$
+ \end{enumerate}
+  \end{remark}
+ \begin{definition}\textbf{Types of commodity forward prices}
+ \begin{enumerate}
+     \item \textbf{Gold Forward Prices:} positive leasing rate
+     \item \textbf{Corn Forward Prices:} the corn forward curve increases until harvest time, drops sharply and then slopes upward again after harvest time is over.
+     \item \textbf{Electricity Forward Prices:} not storable commodity
+     \item \textbf{Natural Gas Forward Prices:} constant production and seasonal demand, expensive to store. Peaks in the fall usually.
+     \item \textbf{Oil Forward Prices:} better to transport than natural gas, more stable long-run forward price
+ \end{enumerate}
+ \end{definition}
+\begin{definition}\textbf{Commodity Spread} results from a commodity that is an input in the production process of the other commodities.
+\begin{enumerate}
+    \item crush spread: soybean
+    \item crack spread: crude oil, we need to know the notation
+    \begin{center}
+        \includegraphics[scale=0.5]{gasoline.PNG}
+    \end{center}
+\end{enumerate}
+\end{definition}
+\begin{definition}
+\begin{enumerate}
+    \item \textbf{Strip Hedge:} Entering multiple future contracts as a long party, matching the maturities and quantities with their obligations under fixed price agreement
+    \item \textbf{Stack Hedge:} oil producer would enter into a one-month futures contract equaling the total value of the year's promised deliveries and redo this every month to reduce transaction costs. \textbf{stack and roll}
+    \item \textbf{Cross Hedge:} a futures contract that is highly correlated with the underlying exposure is selected, this will introduce a basis risk, and usually evaluated based on
+    \begin{enumerate}
+        \item The liquidity of the futures contract
+        \item The correlation between the underlying for the futures contract and the assets being hedged
+        \item The maturity of the ftures contract
+    \end{enumerate}
+    ---Used for weather derivatives for agriculture
+\end{enumerate}
+\end{definition}
 \chapterimage{ima2}
 \chapter{Exchanges, OTC, Derivatives, DPCs and SPVs}
  
