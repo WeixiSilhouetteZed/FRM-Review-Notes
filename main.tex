@@ -83,11 +83,11 @@
 \begingroup
 \thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
-\coordinate [below=12cm] (midpoint) at (current page.north);
+\coordinate [below=10cm] (midpoint) at (current page.north);
 \node at (current page.north west)
 {\begin{tikzpicture}[remember picture,overlay]
-\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{background}}; % Background image
-\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering FRM Review Notes\\[15pt] % Book title
+\node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{titlepage}}; % Background image
+\draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering FRM Review Notes\\[15pt] % Book title
 {\Large University of Waterloo}\\[20pt] % Subtitle
 {\huge The One And Only\\Waterloo 76er\\Bill Zhuo}\\[15pt] % Author name
 {\Large Free Material \& Not For Commercial Use}}}; % Disclaimer
@@ -143,7 +143,7 @@
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-\chapterimage{ima1} % Table of contents heading image
+\chapterimage{probability} % Table of contents heading image
 
 \pagestyle{empty} % No headers
 
@@ -156,7 +156,7 @@
 
 
 \part{Financial Markets and Products}
-\chapterimage{ima2} % Chapter heading image
+\chapterimage{stock} % Chapter heading image
 \chapter{Banks}
 \begin{definition}\textbf{Types of Banks}
 \begin{enumerate}
@@ -216,7 +216,7 @@ The model involves making loans and selling them to other parties. Government ag
 The benefit is increased liquidity but the drawback is the loose lending standards
 \end{definition}
 
-\chapterimage{ima2} % Chapter heading image
+\chapterimage{stock} % Chapter heading image
 \chapter{Insurance Companies and Pension Plans}
 \begin{definition}\textbf{Categories of Insurance Companies}
 \begin{enumerate}
@@ -305,7 +305,7 @@ If an insurance company has both life annuities and life insurance, then there i
     \item Property and Casualty insurance companies typically have a greater amount of equity than a life insurance company
 \end{enumerate}
 \end{remark}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Mutual Funds and Hedge Funds}
 \begin{definition}\textbf{Types of Mutual Funds}
 $$
@@ -394,7 +394,7 @@ $$
 \end{enumerate}
 \end{remark}
 
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Option, Futures, and Other Derivatives}
 \begin{definition}\textbf{Derivative Markets}
 \begin{enumerate}
@@ -444,7 +444,7 @@ hedge the exchange rate risk and the spot rate at maturity is 1.2 \$/\EUR.
 Derivatives create significant leverage for the speculators.
 \end{remark}
 
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Mechanics of Futures Markets}
 $$
 \textbf{Open Interest}=\textbf{Total \# Long Position}=\textbf{Total \# Short Position}
@@ -543,7 +543,7 @@ clearinghouses. \textbf{Why clearinghouse?}
     \item Hedging accounting specifies that gains/losses from a hedging instrument be recognized in the same period as gains/losses from the asset being hedged
 \end{enumerate}
 \end{remark}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Hedging Strategies Using Futures}
 \begin{definition}\textbf{Hedging With Futures}
 \begin{enumerate}
@@ -612,7 +612,7 @@ where $P$ is the portfolio value, $A$ is the value of the underlying asset, $\be
 \begin{remark}
 Due to different maturities of the spot and future, the hedger needs to introduce a new future to roll the hedge forward and this will get rid of the old basis risk but introduce a new basis risk
 \end{remark}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Interest Rates}
 \begin{definition}\textbf{Types of Rates}
 \begin{enumerate}
@@ -697,7 +697,7 @@ $$
 \end{enumerate}
 
 \end{proposition}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Determination of Forward and Future Prices}
 \begin{definition}
 \begin{enumerate}
@@ -799,7 +799,7 @@ where $u$ is the storage cost and $y$ is the convenience yield.
     \item \textbf{Contango} refers to a situation where the futures price is above the spot price. If there are no benefits to holding the asset
 \end{enumerate}
 \end{definition}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Interest Rate Futures}
  \begin{definition}\textbf{Day Count Convention}\\
  $$
@@ -919,7 +919,7 @@ $$
 Thus, the manager should short 792 contracts.
 \end{exercise}
 
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Swaps}
 \begin{definition}\textbf{Financial Intermediaries in Swap Markets}
 \begin{enumerate}
@@ -971,7 +971,7 @@ then, discount cash flows like before and calculate difference.
     \item \textbf{Volatility swap} involves the exchanging of volatility based on notional principal
 \end{enumerate}
 \end{definition}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Mechanics of Option Markets}
 \begin{definition}\textbf{Types of Options}
 \begin{enumerate}
@@ -997,7 +997,7 @@ then, discount cash flows like before and calculate difference.
 
 
 
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Properties of Stock Options}
  \begin{center}
      \begin{figure}[h!]
@@ -1054,7 +1054,7 @@ then, discount cash flows like before and calculate difference.
  S_0-K-D\leq c_{Ame}-p_{Ame}\leq S_0-Ke^{rT}
  $$
  \end{theorem}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Trading Strategies Involving Options}
 \begin{definition}\textbf{Types of Strategies}
 \begin{enumerate}
@@ -1086,7 +1086,7 @@ then, discount cash flows like before and calculate difference.
          \caption{Stock Option Strategies}
      \end{figure}
  \end{center}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Exotic Options}
 \begin{definition}\textbf{Why Exotic Option?}\\
 The exotic options are developed to provide a unique hedge for a firm's underlying assets, tax and regulatory purposes, and speculation on future market. 4 factors need to be considered
@@ -1140,7 +1140,7 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
     \item Statis options replication: a short portfolio of actively traded options that approximates the option position to be hedged is constructed
 \end{enumerate}
 \end{definition}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Commodity Forwards and Futures}
  \begin{theorem}\textbf{Forward Price}
  $$
@@ -1209,7 +1209,7 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
     ---Used for weather derivatives for agriculture
 \end{enumerate}
 \end{definition}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Exchanges, OTC, Derivatives, DPCs and SPVs}
  \begin{definition}\textbf{Forms of Clearing}\\
  \begin{enumerate}
@@ -1260,7 +1260,7 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
      \item In contrast to monolines and CDPCs, which post no variation margin and often no initial margin, CCPs require members to post both initial and variation margin.
  \end{enumerate}
  \end{remark}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Basic Principles of Central Clearing}
  \begin{definition}\textbf{Loss mutualization} is a form of insurance and refers to members' contributions to a default fund to cover future losses from member defaults.
  
@@ -1318,7 +1318,7 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
         \caption{How Novation and Netting Can Help Increasing Efficiency}
     \end{center}
  \end{figure}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Risks Caused by CCPs}
  \begin{definition}\textbf{Risks Caused by CCPs}
  \begin{enumerate}
@@ -1350,7 +1350,7 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
      \end{enumerate}
      \end{definition}
 
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Foreign Exchange Risk}
  \begin{definition}\textbf{Net Position Exposure on a Currency} Let \textbf{CUR} be a specific foreign currency.
     $$
@@ -1393,7 +1393,7 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
     \%\Delta S(\textbf{DC/FC})=\textbf{inflation}(DC)-\textbf{inflation}(FC)
     $$
  \end{theorem}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Corporate Bonds}
 \begin{definition}\textbf{Methods for Retiring Bonds}
     \begin{enumerate}
@@ -1446,7 +1446,7 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
         \item Zero coupon bond has low reinvestment risk
     \end{enumerate}
 \end{remark}
-\chapterimage{ima2}
+\chapterimage{stock}
 \chapter{Mortgages and MBS}
  \begin{definition}\textbf{Credit Guarantees}
     \begin{enumerate}
