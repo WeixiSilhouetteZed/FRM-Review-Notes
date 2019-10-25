@@ -1352,12 +1352,128 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
 
 \chapterimage{ima2}
 \chapter{Foreign Exchange Risk}
- 
+ \begin{definition}\textbf{Net Position Exposure on a Currency} Let \textbf{CUR} be a specific foreign currency.
+    $$
+    \textbf{net CUR exposure}=(\textbf{CUR assets-CUR liabilities})+(\textbf{CUR bought-CUR sold})
+    $$
+ \end{definition}
+ \begin{remark}
+    \begin{enumerate}
+        \item Match foreign currency assets with its liabilities on the balance sheet
+        \item Be long the currency in one component and short the currency in the other component
+    \end{enumerate}
+ \end{remark}
+ \begin{definition} The potential gain/loss exposure to a foreign currency (FC) is a function of 
+    the size of the position and the potential change in the value of the foreign currency
+    $$
+    \textbf{\$ Gain/Loss in CUR}=\textbf{net CUR exposure (in \$)}\times\textbf{\%$\Delta\$/$CUR}
+    $$
+ \end{definition}
+ \begin{definition}\textbf{Types of FX Trading Activities}
+    \begin{enumerate}
+        \item Enabling customers to participate in international commercial
+        business transaction
+        \item Enabling customers to take positions in real or financial foreign investments
+        \item Offsetting exposure in a given currency for hedging purposes
+        \item Speculating on foreign currencies in search of profit
+    \end{enumerate}
+ \end{definition}
+ \begin{theorem}\textbf{Interest Rate Parity}
+    $$
+    \textbf{Forward}=\textbf{Spot}\left(\frac{1+r_{DC}}{1+r_{FC}}\right)^T
+    $$
+    Forward and spot are denoted in $DC/FC$ as well!\\
+    For a continuous compounded rate version, we have
+    $$
+    \textbf{Forward}=\textbf{Spot}\times e^{\left(r_{DC}-r_{FC}\right)T}
+    $$
+ \end{theorem}
+ \begin{theorem}\textbf{Purchasing Power Parity (PPP)}
+    $$
+    \%\Delta S(\textbf{DC/FC})=\textbf{inflation}(DC)-\textbf{inflation}(FC)
+    $$
+ \end{theorem}
 \chapterimage{ima2}
 \chapter{Corporate Bonds}
-
+\begin{definition}\textbf{Methods for Retiring Bonds}
+    \begin{enumerate}
+        \item \textbf{Call Provision:}
+        \begin{enumerate}
+            \item Fixed-price call: call back the bonds a specific price
+            \item Make-whole call: market rates determine the call price
+        \end{enumerate}
+        \item \textbf{Sinking fund provision:} issuing firm retires a specified portion of the debt
+        each year as outlined in the indenture---similar to a maintenance and replacement fund
+        \item \textbf{Tender Offers:} the firm openly indicates an interest in buying back a certain
+        dollar amount of bonds or, more oftern, all of the bonds at a set price
+    \end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Types of Risks Related to Bonds}
+    \begin{enumerate}
+        \item Credit sperad risk focuses on the difference between a corporate bond's
+        yield and the yield on a comparable-maturity benchmark Treasury security.
+        The difference is known as the credit spread
+        \item Event risk addresses the adverse consequences from possible events such as
+        mergers, recapitalizations, restructurings, acquisitions, leveraged buyouts... 
+        \item Businessman's risk refers to bonds with a rating at the bottom rung of the investment
+        -grade category, short term it is volatile
+        \item Fallen angels: downgraded investment-grade bonds
+        \item restructurings and leveraged buyouts may increase the credit risk of a company today
+        the point where the bonds cecome non-investment grade
+        \item \textbf{High-Yield Bond Structure}
+        \begin{itemize}
+            \item Reset bonds: reset coupon payment based on market
+            \item Deferred-interest bonds: deep discount, so no interest in early years
+            \item Step-up bonds: low interest in early years but higher interest in later years
+            \item Payment-in-kind bonds: pay interest with additional bonds
+        \end{itemize}
+    \end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Default Rates}
+    \begin{enumerate}
+        \item \textbf{Issuer default rate} number of issuers that defaulted over a year divided by the total
+        total number of issuer at the beginning of the year
+        \item \textbf{Dollar default rate} the par value of all bonds that defualted in a diven calendar year
+        divided by the total par value of all bonds outstanding during the year
+        \item \textbf{Recovery rate} is the amount received as a proportion of the toital obligation
+        after a bond defaults
+    \end{enumerate}
+\end{definition}
+\begin{remark}
+    \begin{enumerate}
+        \item Bond rating agencies only handles default risk but not credit risk since it would be accessed by the
+        the credit spread duration
+        \item Zero coupon bond has low reinvestment risk
+    \end{enumerate}
+\end{remark}
 \chapterimage{ima2}
 \chapter{Mortgages and MBS}
- 
- 
+ \begin{definition}\textbf{Credit Guarantees}
+    \begin{enumerate}
+        \item \textbf{Government Loans} GNMA Ginnie Mae
+        \item \textbf{Converntional Loans} government-sponsored enterprises, FHLMC, FNMA
+    \end{enumerate}
+ \end{definition}
+ \begin{definition}\textbf{Other Factors That Influence Prepayments}
+    \begin{enumerate}
+        \item Seasonality: summertime---greatest risk
+        \item Age of mortgage pool: refinancing in later years
+        \item Personal: marital breakdown, family issues... 
+        \item Housing prices: rising housing price will result in higher prepayment risk
+        \item Refinancing burnout: people who cannot refinance... 
+    \end{enumerate}
+ \end{definition}
+ \begin{defintion}\textbf{Prepayment Speed}
+    Let $CPR$ be the conditional prepayment rate, which is the annula rate at which a mortgage
+    pool balance is assumed to be prepaid during the life of the pool. A mortgage pool's CPR issue
+    a function of past prepayment rates and expected future economic conditions.
+    $$
+    CPR=1-(1-SMM)^12
+    $$
+    where $SMM$ is the single monthly mortality rate.
+ \end{defintion}
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.6]{PSA.png}
+ \end{figure}
 \end{document}

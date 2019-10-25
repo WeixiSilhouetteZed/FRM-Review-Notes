@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  23 OCT 2019 23:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  25 OCT 2019 00:10
 entering extended mode
 **"c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex"
 ("c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex"
@@ -2276,56 +2276,34 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 1265.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1272.
+(mdframed)              on input line 1268.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1275.
 <Central.png, id=620, 396.48125pt x 144.20541pt>
 File: Central.png Graphic file (type png)
 <use Central.png>
-Package pdftex.def Info: Central.png  used on input line 1288.
+Package pdftex.def Info: Central.png  used on input line 1291.
 (pdftex.def)             Requested size: 277.53497pt x 100.94308pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1291.
+(mdframed)              on input line 1294.
 [38
 
  <c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/Central.png>]
-<clearing.png, id=641, 480.12709pt x 196.06583pt>
+Package mdframed Info: Not enough space on this page on input line 1314.
+<clearing.png, id=639, 480.12709pt x 196.06583pt>
 File: clearing.png Graphic file (type png)
 <use clearing.png>
-Package pdftex.def Info: clearing.png  used on input line 1314.
+Package pdftex.def Info: clearing.png  used on input line 1317.
 (pdftex.def)             Requested size: 336.08665pt x 137.24512pt.
  [39 <c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/clearing.png>]
 Cap\'{\i }tulo 18.
-c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1319: Undefined control sequence.
-\@makechapterhead ...mdepth >\m@ne \if@mainmatter 
-                                                  \begin {tikzpicture}[remem...
-l.1319 \chapter{Risks Caused by CCPs}
-                                     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-File: Pictures/ima2.jpg Graphic file (type jpg)
-<use Pictures/ima2.jpg>
-Package pdftex.def Info: Pictures/ima2.jpg  used on input line 1319.
-(pdftex.def)             Requested size: 597.50787pt x 279.45412pt.
-c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1319: Extra \fi.
-\Hy@org@chapter ...terhead {#2}\@afterheading \fi 
-                                                  
-l.1319 \chapter{Risks Caused by CCPs}
-                                     
-I'm ignoring this; it doesn't match any \if.
-
-[40
-
-]
-Cap\'{\i }tulo 19.
 c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1322: Undefined control sequence.
 \@makechapterhead ...mdepth >\m@ne \if@mainmatter 
                                                   \begin {tikzpicture}[remem...
-l.1322 \chapter{Foreign Exchange Risk}
-                                      
+l.1322 \chapter{Risks Caused by CCPs}
+                                     
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2339,18 +2317,69 @@ Package pdftex.def Info: Pictures/ima2.jpg  used on input line 1322.
 c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1322: Extra \fi.
 \Hy@org@chapter ...terhead {#2}\@afterheading \fi 
                                                   
-l.1322 \chapter{Foreign Exchange Risk}
+l.1322 \chapter{Risks Caused by CCPs}
+                                     
+I'm ignoring this; it doesn't match any \if.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1323.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1343.
+[40
+
+]
+Cap\'{\i }tulo 19.
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1354: Undefined control sequence.
+\@makechapterhead ...mdepth >\m@ne \if@mainmatter 
+                                                  \begin {tikzpicture}[remem...
+l.1354 \chapter{Foreign Exchange Risk}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+File: Pictures/ima2.jpg Graphic file (type jpg)
+<use Pictures/ima2.jpg>
+Package pdftex.def Info: Pictures/ima2.jpg  used on input line 1354.
+(pdftex.def)             Requested size: 597.50787pt x 279.45412pt.
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1354: Extra \fi.
+\Hy@org@chapter ...terhead {#2}\@afterheading \fi 
+                                                  
+l.1354 \chapter{Foreign Exchange Risk}
                                       
 I'm ignoring this; it doesn't match any \if.
 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1355.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1366.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1372.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1381.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1390.
 [41
 
 ]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1391.
+ [42]
 Cap\'{\i }tulo 20.
-c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1325: Undefined control sequence.
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1397: Undefined control sequence.
 \@makechapterhead ...mdepth >\m@ne \if@mainmatter 
                                                   \begin {tikzpicture}[remem...
-l.1325 \chapter{Corporate Bonds}
+l.1397 \chapter{Corporate Bonds}
                                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2360,23 +2389,32 @@ and I'll forget about whatever was undefined.
 
 File: Pictures/ima2.jpg Graphic file (type jpg)
 <use Pictures/ima2.jpg>
-Package pdftex.def Info: Pictures/ima2.jpg  used on input line 1325.
+Package pdftex.def Info: Pictures/ima2.jpg  used on input line 1397.
 (pdftex.def)             Requested size: 597.50787pt x 279.45412pt.
-c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1325: Extra \fi.
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1397: Extra \fi.
 \Hy@org@chapter ...terhead {#2}\@afterheading \fi 
                                                   
-l.1325 \chapter{Corporate Bonds}
+l.1397 \chapter{Corporate Bonds}
                                 
 I'm ignoring this; it doesn't match any \if.
 
-[42
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1398.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1411.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1432.
+[43
 
-]
+] [44]
 Cap\'{\i }tulo 21.
-c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1328: Undefined control sequence.
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1450: Undefined control sequence.
 \@makechapterhead ...mdepth >\m@ne \if@mainmatter 
                                                   \begin {tikzpicture}[remem...
-l.1328 \chapter{Mortgages and MBS}
+l.1450 \chapter{Mortgages and MBS}
                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2386,30 +2424,70 @@ and I'll forget about whatever was undefined.
 
 File: Pictures/ima2.jpg Graphic file (type jpg)
 <use Pictures/ima2.jpg>
-Package pdftex.def Info: Pictures/ima2.jpg  used on input line 1328.
+Package pdftex.def Info: Pictures/ima2.jpg  used on input line 1450.
 (pdftex.def)             Requested size: 597.50787pt x 279.45412pt.
-c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1328: Extra \fi.
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1450: Extra \fi.
 \Hy@org@chapter ...terhead {#2}\@afterheading \fi 
                                                   
-l.1328 \chapter{Mortgages and MBS}
+l.1450 \chapter{Mortgages and MBS}
                                   
 I'm ignoring this; it doesn't match any \if.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1451.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1457.
+
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1466: LaTeX Error: Environment defintion undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1466  \begin{defintion}
+                         \textbf{Prepayment Speed}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex:1474: LaTeX Error: \begin{document} ended by \end{defintion}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1474  \end{defintion}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<PSA.png, id=729, 671.17416pt x 565.11125pt>
+File: PSA.png Graphic file (type png)
+<use PSA.png>
+Package pdftex.def Info: PSA.png  used on input line 1477.
+(pdftex.def)             Requested size: 402.70761pt x 339.06937pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
-[43
+[45
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1331.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1331.
+] [46 <c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/PSA.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1479.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1479.
  ("c:/Users\billz\OneDrive - University of Waterloo\Desktop\Profession Examination\FRM\Notes\FRM-Review-Notes\main.aux"
 LaTeX Info: Redefining \sptext on input line 30.
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1331.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1331.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1479.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1479.
 
 
 LaTeX Warning: There were undefined references.
@@ -2427,17 +2505,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40789 strings out of 492453
- 759461 string characters out of 3129819
- 1333685 words of memory out of 3000000
- 43942 multiletter control sequences out of 15000+200000
- 650199 words of font info for 285 fonts, out of 3000000 for 9000
+ 40880 strings out of 492453
+ 760356 string characters out of 3129819
+ 1333683 words of memory out of 3000000
+ 43950 multiletter control sequences out of 15000+200000
+ 650979 words of font info for 297 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,11n,69p,1076b,2923s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:/Users\billz\OneDrive - University of Waterloo\Desktop\Profession Examination\FRM\Notes\FRM-Review-Notes\main.pdf" (43 pages, 1150947 bytes).
+Output written on "c:/Users\billz\OneDrive - University of Waterloo\Desktop\Profession Examination\FRM\Notes\FRM-Review-Notes\main.pdf" (46 pages, 1414109 bytes).
 PDF statistics:
- 882 PDF objects out of 1000 (max. 8388607)
- 452 named destinations out of 1000 (max. 500000)
- 54004 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 969 PDF objects out of 1000 (max. 8388607)
+ 516 named destinations out of 1000 (max. 500000)
+ 54009 words of extra memory for PDF output out of 61914 (max. 10000000)
 
