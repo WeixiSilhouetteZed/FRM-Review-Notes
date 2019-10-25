@@ -1337,7 +1337,6 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
          \item Sovereign risk: foreign government default on its debt obligation
          \item Wrong-way risk refers to the risk that exposure to a counterparty is negatively correlated the credit quality of the counterparty
      \end{enumerate}
-     
  \end{enumerate}
  \end{definition}
  \begin{definition}\textbf{Lessons learned from CCP Failures}
@@ -1476,4 +1475,100 @@ The exotic options are developed to provide a unique hedge for a firm's underlyi
     \centering
     \includegraphics[scale=0.6]{PSA.png}
  \end{figure}
+ 
+ \part{Valuation and Risk Models}
+
+ \chapterimage{stock}
+\chapter{Quantifying Volatility in VaR Models}
+\begin{definition}\textbf{VaR}
+Assuming normal distribution, then dollar VaR is
+    $$
+    VaR(X\%)_{dollar}=VaR(X\%)_{deci}\times\textbf{Asset Value}=(z_{X\%}\sigma)\times\textbf{Asset Value}
+    $$
+    where $z_{X\%}$ is the critical z-value based on the normal distribution and the selected $X\%$ probability and $\sigma$ is the standard deviation of daily returns on a percentage basis.
+\end{definition}
+\begin{remark}\textbf{Given Expected Return...}
+If expected return is given then
+$$
+VaR=[E(R)-z\cdot\sigma]
+$$
+at $X\%$ significance.
+\end{remark}
+\begin{theorem}\textbf{VaR Time Conversion}
+$$
+VaR(X\%)_{J\textbf{-days}}=VaR(X\%)_{1\textbf{-day}}\sqrt{J}
+$$
+\end{theorem}
+\begin{theorem}\textbf{VaR Confidence Level Conversion}
+Given original VaR confidence level $\alpha$ and the future confidence level is $\beta$, then
+$$
+VaR(1-\beta)=VaR(1-\alpha)\times\frac{z_{(1-\beta)}}{z_{(1-\alpha)}}
+$$
+\end{theorem}
+\begin{definition}\textbf{The VaR Methods}
+\begin{enumerate}
+    \item \textbf{Linear Methods}
+    \item \textbf{Full Valuation Methdos}
+\end{enumerate}
+\end{definition}
+  \chapterimage{stock}
+\chapter{Putting VaR to Work}
+
+  \chapterimage{stock}
+\chapter{Measures of Financial Risk}
+
+  \chapterimage{stock}
+\chapter{Binomial Trees}
+
+   \chapterimage{stock}
+\chapter{The Black-Scholes-Merton Model}
+ 
+   \chapterimage{stock}
+\chapter{The Greek Letters}
+
+   \chapterimage{stock}
+\chapter{Prices, Discount Factors, and Arbitrage}
+
+   \chapterimage{stock}
+\chapter{Spot, Forward, and Par Rates}
+
+   \chapterimage{stock}
+\chapter{Returns, Spreads, and Yields}
+
+   \chapterimage{stock}
+\chapter{One-Factor Risk Metrics and Hedges}
+
+   \chapterimage{stock}
+\chapter{Multi-Factor Risk Metrics and Hedges}
+
+   \chapterimage{stock}
+\chapter{Country Risk: Determinants, Measures, and Implications}
+
+   \chapterimage{stock}
+\chapter{External and Internal Ratings}
+
+   \chapterimage{stock}
+\chapter{Capital Structure in Banks}
+
+   \chapterimage{stock}
+\chapter{Operational Risk}
+
+   \chapterimage{stock}
+\chapter{Governance Over Stress Testing}
+
+   \chapterimage{stock}
+\chapter{Stress Testing and Other Risk Management Tools}
+
+   \chapterimage{stock}
+\chapter{Principles for Sound Stress Testing Practices and Supervision}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 \end{document}
