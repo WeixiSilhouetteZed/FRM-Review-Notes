@@ -1507,9 +1507,205 @@ $$
 \end{theorem}
 \begin{definition}\textbf{The VaR Methods}
 \begin{enumerate}
-    \item \textbf{Linear Methods}
-    \item \textbf{Full Valuation Methdos}
+    \item \textbf{Linear Methods} replace portfolio positions with linear exposures on the appropriate risk factor. Cheaper but less accurate, usually use Delta-normal method
+    \item \textbf{Full Valuation Methods} fully reprice the portfolio for each scenario encountered over a historical period, or over a great number of hypothetical scenarios developed through historical simulation or Monte Carlo simulation. More complicated and costly but more accurate
 \end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Delta-Normal Approach}
+Let $S$ be a measured risk factor and $V$ as the portfolio value, we can model the relationship as
+$$
+dV=\Delta_0\times dS
+$$
+the VaR at a given level of significance $z$ can be written as
+$$
+VaR=|\Delta_0|\times z\times\sigma\times S_0
+$$
+where $z\times\sigma\times S_0=VaR_S$
+\end{definition}
+\begin{definition}
+\begin{enumerate}
+    \item \textbf{Monte Carlo Simulation} approach revalues a portfolio for a large number of risk factor values, randomly selected from a normal distribution
+    \item \textbf{Historical simulation} revalues a protfolio using actual values for risk factors taken from historical data
+\end{enumerate}
+\end{definition}
+\begin{exercise}\textbf{Delta-Normal VaR}\\
+The expected 1-day return for a \$100,000,000 portfolio is 0.00085 and the historical standard deviation of daily returns is 0.0011. Calculate daily value at risk (VaR) at 5\% significance.
+
+\textbf{Solution}
+
+$z_{5\%}=qnorm(0.95)=1.65$ then
+$$
+VaR=[E(R)-z_{5\%}\sigma]\times V_p=[0.00085-1.65\times 0.0011]\times 100000000=-96500
+$$
+\end{exercise}
+\begin{remark}\textbf{Volatility Conversion}
+$$
+\sigma_{daily}\cong\frac{\sigma_{annual}}{\sqrt{250}}\hspace{2cm}\sigma_{monthly}\cong\frac{\sigma_{annual}}{\sqrt{12}}
+$$
+\end{remark}
+\begin{remark}
+\begin{enumerate}
+    \item \textbf{Advantages of Delta-Normal VaR}
+    \begin{enumerate}
+        \item Easy to implement
+        \item Calculations can be performed quickly
+        \item Conducive to analysis because risk factors, correlations, and volatilities are identified
+    \end{enumerate}
+    \item \textbf{Disadvantages of Delta-Normal VaR}
+    \begin{enumerate}
+        \item The need to assume a normal distribution
+        \item The method is unable to properly account for distributions with fat tails, either because of unidentified time variation in risk or unidentified risk factors and/or correlations
+        \item Nonlinear relationships of option-like positions are note adequately described by the delta-normal method
+    \end{enumerate}
+\end{enumerate}
+\end{remark}
+\begin{remark}
+\begin{enumerate}
+    \item Historical method just count the percentile of the historical data to calculate $VaR$ assuming Normal distribution
+    \item \textbf{Advantages of Historical VaR}
+    \begin{enumerate}
+        \item The model is easy to implement when historical data is readily available
+        \item Calcuateions are simple
+        \item Horizon is positive choice based on the intervals of historical data
+        \item Based on actual prices not exposed to model risk
+        \item Includes all correlations
+    \end{enumerate}
+    \item \textbf{Disadvantages of Historical VaR}
+    \begin{enumerate}
+        \item It may not be enough data
+        \item Time variation of risk in the past may not represent variation in the future
+        \item The model may not recognize changes in volatility and correlations from structural changes
+        \item The weighting might be different for new and old data EWMA can be used to solve this
+        \item A small number of actual observations may lead to insufficently defined distribution tails
+    \end{enumerate}
+\end{enumerate}
+\end{remark}
+\begin{remark}
+\begin{enumerate}
+    \item \textbf{Advantages of the Monte Carlo method}
+    \begin{enumerate}
+        \item It is the most powerful model, account for both linear and nonlinear risks
+        \item It can include time variation in risk and correlations
+        \item Flexible and extensible
+        \item Nearly unlimited numbers of scenarios
+    \end{enumerate}
+    \item \textbf{Disadvantages of the Monte Carlo method}
+    \begin{enumerate}
+        \item Lengthy computation and expensive
+        \item Model risk of the stochastic process chosen
+        \item Sampling variation at lower numbers of simulation
+    \end{enumerate}
+\end{enumerate}
+\end{remark}
+\begin{definition}\textbf{3 Common Deviation from Normality in Modeling Risk}
+\begin{enumerate}
+    \item \textbf{Fat-tailed}: most likely the result of the volatility and/or the mean of the distribution changing over time in a unconditional distribution, can be solved by regime-switching model
+    \item \textbf{Skewed}
+    \item \textbf{Unstable parameters}
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Regime-Switching Volatility Model} assumes different market regimes exist with high or low volatility. The conditional distributions of returns are always normal with a constant mean but either have a high or low volatility
+\end{definition}
+\begin{remark}
+Asset return distributions tend to exhibit fat tails. As a result, VaR may underestimate the actual loss amount.
+\end{remark}
+\begin{definition}\textbf{Estimating VaR}
+\begin{enumerate}
+    \item \textbf{Historical-Based}
+    \begin{enumerate}
+        \item Parametric approach: requires specific assumtions regarding the asset returns distribution, on $K$ most recent data, we can estimate the future volatility to be
+        $$
+        \sigma_t^2=\left(r_{t-K,t-K+1}^2+\dots r_{t-1,t}^2\right)/K
+        $$
+        delta-normal method is an example parametric approach
+        \item Nonparametric approach: historical data model
+        \item Hybrid
+    \end{enumerate}
+    \item \textbf{Implied-volatility-based approach} uses derivative pricing models such as BSM option pricing model to estimate an implied volatility based on current market data rather than historical data
+    \begin{enumerate}
+        \item Advantage: forward-looking and reacts immediately to changing market conditions
+        \item Disadvantage: model dependent
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Exponential Smoothing Weighting Methods}
+\begin{enumerate}
+    \item Are parametric
+    \item Attempt to estimate conditional volatility
+    \item Use recent historical data
+    \item Apply a set of weights to past squared returns
+\end{enumerate}
+Including EWMA and GARCH
+\end{definition}
+\begin{theorem}\textbf{EWMA Model}\\ 
+$$
+\sigma_t^2=(1-\lambda)\left(\lambda^0r_{t-1,t}^2+\dots+\lambda^Nr_{t-N-1,t-N}^2\right)
+$$
+for $0<\lambda<1$ and $N$ is the number of observations used to estimate volatility. We can reduce this to be
+$$
+\sigma_t^2=(1-\lambda)r_{t-1,t}^2+\lambda\sigma_{t-1}^2
+$$
+\end{theorem}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{exponential.PNG}
+    \caption{Volatility Weighting Under Exponential Smoothing and Historical SD Approach}
+\end{figure}
+\begin{remark}
+\begin{enumerate}
+    \item When $K$ is small as a shorter estimation window, the historical SD method results in forecasts that are more volatile
+    \item When $\lambda$ is smaller, will result in more volatile forecast as well
+\end{enumerate}
+\end{remark}
+\begin{theorem}\textbf{GARCH Model}\\
+To estimate volatility, the GARCH(p,q) model using the following formula
+$$
+\sigma_t^2=a+b_1r_{t-1,t}^2+\dots+b_{p}r_{t-p,t-p+1}^2+c_1\sigma_{t-1}^2+\dots+c_q\sigma_{t-q}^2
+$$
+$p,q$ are lagging terms for return and volatility. The standard GARCH(1,1) model is
+$$
+\sigma_t^2=a+br_{t-1,t}^2+c\sigma_{t-1}^2
+$$
+when $a=0,b+c=1$, this is identical to EWMA model
+\end{theorem}
+\begin{definition}\textbf{Nonparametric VaR Methods}: historical simulation, multivariate density estiamtion, hybrid
+\begin{enumerate}
+    \item \textbf{Advantages:}
+    \begin{enumerate}
+        \item No distribution assumption
+        \item MDE allows for weights to vary based on market environment instead of timing
+    \end{enumerate}
+    \item \textbf{Disadvantages:}
+    \begin{enumerate}
+        \item Data is more efficient with parametric methods
+        \item Separating the full sample of data into different market regimes reduces the usable data
+        \item MDE may lead to overfitting
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Historical Approach}
+Same weighting for all return data, care for random distribution by taking average
+\end{definition}
+\begin{definition}\textbf{Hybrid Approach}
+Combine percentiles of return and exponential smoothing
+\end{definition}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.46]{hybrid.PNG}
+\end{figure}
+\begin{definition}\textbf{Multivariate Density Estimation (MDE)}\\
+For each market regime, the conditional volatility is calculated as
+$$
+\sigma_t^2=\sum_{i=1}^K\omega(X_{t-i})r_{t-i}^2
+$$
+$\omega(X_{t-i})$ is used to measure the realtive weiht in terms of near or distant from the current state
+\end{definition}
+\begin{definition}\textbf{Mean Reversion}\\
+Recall AR model say
+$$
+r_{i}=a+br_{i-1}\to \lim_{i\to\infty}r_i=\frac{a}{1-b}
+$$
+when $b<1$, we say this is mean reverting. 
 \end{definition}
   \chapterimage{stock}
 \chapter{Putting VaR to Work}
