@@ -1728,7 +1728,50 @@ $$
 \end{remark}
   \chapterimage{stock}
 \chapter{Measures of Financial Risk}
+\begin{definition}\textbf{M-V Framework Limitations}
+\begin{enumerate}
+    \item Not appropriate for non-normal distributions
+    \item Especially positively skewed
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Limitation of VaR}
+\begin{enumerate}
+    \item VaR increases when when the confidence level increases, VaR will increase at an increasing rate as the confidence level increases
+    \item VaR will increase with increases in the holding period
+\end{enumerate}
+\end{definition}
+\begin{definition}
+\textbf{Coherent Risk Measures}
+Let $R$ be a set of random events and $\rho(R)$ to be the risk measure for the random events
+\begin{enumerate}
+    \item \textbf{Monotonicity:} a portfolio with greater future returns will likely have less risk:
+    $$
+    R_1\leq R_2\to\rho(R_1)\leq\rho(R_2)
+    $$
+    \item \textbf{Subadditivity:}
+    $$
+    \rho(R_1+R_2)\leq \rho(R_1)+\rho(R_2)
+    $$
+    \item \textbf{Positive Homogeneity:} for $\beta>0$
+    $$
+    \rho(\beta R)=\beta\rho(R)
+    $$
+    \item \textbf{Translation Invariance:} for constant $c$
+    $$
+    \rho(c+R)=\rho(R)+c
+    $$
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Expected Shortfall}\\
+\begin{enumerate}
+    \item ES and VaR both are coherent risk measures but ES can do better with non-elliptical distributions
+    \item The portfolio risk surface for ES is convex because the property of subbadditivity is met. ES is more appropriate for solving portfolio optimization problems than the VaR method
+    \item ES gives an estimate of the magnitude of a loss for unfavorable events
+    \item ES has less restrictive assumptions regarding risk/return decision rules
+\end{enumerate}
 
+
+\end{definition}
   \chapterimage{stock}
 \chapter{Binomial Trees}
 
