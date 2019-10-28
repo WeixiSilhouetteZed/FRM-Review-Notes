@@ -1709,7 +1709,23 @@ when $b<1$, we say this is mean reverting.
 \end{definition}
   \chapterimage{stock}
 \chapter{Putting VaR to Work}
-
+\begin{definition}\textbf{VaR for Linear Derivatives}\\
+Assuming $F_t=\Delta S_t$ where $\Delta$ is the sensitivity of the derivative price wrt to the underlying asset price. Then
+$$
+VaR(F_t)=\Delta VaR(S_t)
+$$
+\end{definition}
+\begin{definition}\textbf{Structured Monte Carlo (SMC) Approach} simulates thousands of valuation outcomes for the underlying assets based on the assumption of normality. The VaR for the portfolio of derivatives is then calculated from the simulated outcomes. 
+\begin{enumerate}
+    \item Advantage is that SMC can simulate multiple risk factors by assuming an underlying distribution
+    \item Disadvantage is that the estimation may not be accurate and cannot be improved by more simulations
+\end{enumerate}
+\end{definition}
+\begin{remark}
+\begin{enumerate}
+    \item A contagion effect often occurs where volatility and correlations both increase, thus mitigating any diversification benefits
+\end{enumerate}
+\end{remark}
   \chapterimage{stock}
 \chapter{Measures of Financial Risk}
 
@@ -1738,7 +1754,7 @@ when $b<1$, we say this is mean reverting.
 \chapter{Multi-Factor Risk Metrics and Hedges}
 
    \chapterimage{stock}
-\chapter{Country Risk: Determinants, Measures, and Implications}
+\chapter{Country Risk}
 
    \chapterimage{stock}
 \chapter{External and Internal Ratings}
@@ -1753,10 +1769,10 @@ when $b<1$, we say this is mean reverting.
 \chapter{Governance Over Stress Testing}
 
    \chapterimage{stock}
-\chapter{Stress Testing and Other Risk Management Tools}
+\chapter{Stress Testing}
 
    \chapterimage{stock}
-\chapter{Principles for Sound Stress Testing Practices and Supervision}
+\chapter{Principles for Sound Stress Testing}
 
  
  
