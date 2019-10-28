@@ -1820,7 +1820,93 @@ one option contract is needed for each $\Delta$ stock
  If we shorten the length of the intervals to be arbitrarily small in the binomial model, then the option valuation will converge to its continuous time model called Black-Scholes-Merton Model.
  \end{theorem}
 \chapter{The Black-Scholes-Merton Model}
- 
+ \begin{definition}\textbf{Lognormal Stock Price \& Normal Stock Return}\\
+ The BSM model assumes stock prices are lognomally distributed
+ $$
+ \ln S_T\sim G\left(\ln S_0+\left(\mu-\frac{\sigma^2}{2}\right)T,\sigma\sqrt{T}\right)
+ $$
+ However, the stock returns are normally distributed when considering continuously compounded annual rate of return $\alpha$ (geometric return),
+ $$
+ \alpha\sim G\left(\mu-\frac{\sigma^2}{2},\frac{\sigma}{\sqrt{T}}\right)
+ $$
+ \end{definition}
+ \begin{theorem}\textbf{Expection of Stock Price}
+ $$
+ E(S_T)=S_0e^{\mu T}
+ $$
+ where $\mu$ is the arithmetic expected rate of return.
+ \end{theorem}
+ \begin{remark}
+ When calculating \textbf{realized rate of return}, we need to use the geometric return
+ \end{remark}
+ \begin{definition}\textbf{Black-Scholes-Merton Model}
+ BSM model values options in continuous time and is derived from the same no-arbitrage assumption used to value options with the binomial model. The assumptions are as follow:
+ \begin{enumerate}
+     \item The price of the underlying asset follows a lognormal distribution
+     \item The risk-free rate is continuous, constant, and known
+     \item The volatility of the underlying asset is constant and known
+     \item No transaction costs, no taxes, and no restrictions on short sales
+     \item The underlying assets has no cash flow
+     \item The options valued are European options
+ \end{enumerate}
+ \end{definition}
+ \begin{theorem}\textbf{BSM for non-dividend stock option}
+ Since we do not have dividend, we have $S=S_0$ and the following equations
+ $$
+ c=SN(d_1)-Ke^{-rT}N(d_2)\hspace{1cm}p=Ke^{-rT}(1-N(d_2))-S(1-N(d_1))
+ $$
+ where
+ $$
+ d_1=\frac{\ln\left(\frac{S}{K}\right)+(r+\frac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}\hspace{1cm}d_2=d_1-(\sigma\sqrt{T})
+ $$
+ \end{theorem}
+ \begin{theorem}\textbf{BSM with dividend rate or payment}
+ Suppose we do have a continuous dividend yield of $\delta$, then we need to adjust
+ $$
+ S=S_0e^{-\delta T}
+ $$
+ and resubstitute. If we have a dividend payment, then adjust as follow
+ $$
+ S=S_0-PV(dividends)
+ $$
+ Then, resubstitute and get the result.
+ \end{theorem}
+ \begin{remark}
+ Even though we do not have a BSM for American options, we still have a result that the closer the option is to expiration and the larget the dividend, the more optimal early exercise will become. The early exercise of American \textbf{call option }will be not optimal if
+ $$
+ D_n\leq K(1-e^{-r(T-t_n)}),t_n<T
+ $$
+ Here, if it is optimal to exercise early, then we need to apply BSM approximation by adjust $S$ to only subtract PV of the dividends before the $n$-th dividend payment and the time should stop at $t_n$ for evaluation. For, American \textbf{put option}, early exercise becomes less likely with larger dividends, it not optimal if
+ $$
+ D_n\geq K(1-e^{-r(T-t_n)}),t_n<T
+ $$
+ \end{remark}
+ \begin{theorem}\textbf{Warrant Valuation}\\
+ Warrants are attachments to a bond issue that give the holder the right to purchase shares of a security at a stated price. Assuming no benefit to the company from issuing warrants, the value is
+ $$
+ \frac{N}{N+M}\times\textbf{Value of regular call option}
+ $$
+ where $N$ is the number of shares outstanding and $M$ is the number of new warrants issued
+ \end{theorem}
+ \begin{definition}\textbf{Historical Volatility Estimation}
+ \begin{enumerate}
+     \item Convert a times series of $N$ prices to returns
+     $$
+     R_i=\frac{P_i-P_{i-1}}{P_{i-1}},1\leq i\leq N
+     $$
+     \item Convert the returns to continuously compounded returns
+     $$
+     R_i=\ln(1+R_i),1\leq i\leq N
+     $$
+     \item Calculate the variance and SD of the continuously compounded returns
+     $$
+     \sigma^2=\frac{\sum_{i=1}^N(R_{i}-\Bar{R})^2}{N-1}
+     $$
+ \end{enumerate}
+ \end{definition}
+ \begin{theorem}\textbf{Implied Volatility by BSM}
+ Given market option prices, we can use BSM to backtrack the volatility.
+ \end{theorem}
    \chapterimage{stock}
 \chapter{The Greek Letters}
 
