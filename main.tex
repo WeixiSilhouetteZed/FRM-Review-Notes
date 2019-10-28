@@ -1774,8 +1774,51 @@ Let $R$ be a set of random events and $\rho(R)$ to be the risk measure for the r
 \end{definition}
   \chapterimage{stock}
 \chapter{Binomial Trees}
-
+\begin{theorem}\textbf{Perfect Hedge Ratio}
+$$
+\Delta=\frac{C_U-C_D}{S_U-S_D}
+$$
+one option contract is needed for each $\Delta$ stock
+\end{theorem}
    \chapterimage{stock}
+ \begin{theorem}\textbf{Synthetic Call Replication}\\
+ A combination of the delta, the stock price, and the PV of the borrowings can be used to price the call option
+ $$
+ C=\Delta\times(S-PV(B))
+ $$
+ \end{theorem}
+ \begin{theorem}\textbf{Risk-Neutral With No Dividend}
+ $$
+ U=e^{\sigma\sqrt{t}}\hspace{1cm}D=\frac{1}{U}=e^{-\sigma\sqrt{t}}
+ $$
+ $$
+ \pi_u=\frac{e^{rt}-D}{U-D}\hspace{1cm}\pi_d=1-\pi_u
+ $$
+ \end{theorem}
+ \begin{remark}The above result is for \textbf{call} option pricing. You need to account for the expected cashflow at the end of the stage and discount it back. To get the put option price, use the put-call parity 
+ $$
+ p=c-S+Ke^{-rt}
+ $$
+ \end{remark}
+ \begin{theorem}\textbf{Risk Neutral with Dividend $\delta$}
+ For stocks, $\delta$ is the dividend yield, 
+ $$
+  \pi_u=\frac{e^{(r-\delta)t}-D}{U-D}\hspace{1cm}\pi_d=1-\pi_u
+ $$
+ For currencies $r_{FC}$ is the foreign currency risk-free rate
+ $$
+  \pi_u=\frac{e^{(r_{DC}-r_{FC})t}-D}{U-D}\hspace{1cm}\pi_d=1-\pi_u
+ $$
+ For futures, since they are costless to enter into, we have
+ $$
+  \pi_u=\frac{1-D}{U-D}\hspace{1cm}\pi_d=1-\pi_u
+ $$
+ \end{theorem}
+ \begin{remark} For American option with dividends, we know that there is a possibility of early exercise. Thus, when dealing with multi-stage binomial tree. The actual payoff and the risk-neutral payoff at each intermediate node need to be compared to decide whether early exercise is available and proceed further. This is cumbersome and tricky for most of the time.
+ \end{remark}
+ \begin{theorem}
+ If we shorten the length of the intervals to be arbitrarily small in the binomial model, then the option valuation will converge to its continuous time model called Black-Scholes-Merton Model.
+ \end{theorem}
 \chapter{The Black-Scholes-Merton Model}
  
    \chapterimage{stock}
