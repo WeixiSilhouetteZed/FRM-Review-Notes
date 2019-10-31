@@ -1909,10 +1909,79 @@ one option contract is needed for each $\Delta$ stock
  \end{theorem}
    \chapterimage{stock}
 \chapter{The Greek Letters}
-
+\begin{definition}\textbf{Positions}\\
+\begin{enumerate}
+    \item \textbf{Naked position} occurs when one party sells a call option without owning the underlying asset
+    \item \textbf{Covered position} occurs when the party selling a call option owns the underlying asset
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Delta \& Delta Hedging}\\
+$$
+\Delta=\frac{\partial C}{\partial S}
+$$
+The option delta is just $N(d_1)$.\\
+The future delta is $e^{(r-\delta)T}$.
+\end{definition}
+\begin{definition}\textbf{Delta-neutral portfolio}\\
+$$
+\textbf{Number of options needed to delta hedge}=\frac{\textbf{number of shares hedged}}{\textbf{delta of call option}}
+$$
+\end{definition}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=1]{delta.PNG}
+\end{figure}
+\begin{definition}\textbf{Portfolio Delta}\\
+$$
+\textbf{Portfolio Delta}=\Delta_p=\sum_{i=1}^nw_i\Delta_i
+$$
+\end{definition}
+\begin{definition}\textbf{Theta}\\
+$$
+\theta=\frac{\partial C}{\partial t}
+$$
+For European call options on non-dividend-paying stocks, $\theta$ can be calculated using the BSM formula
+\begin{align*}
+    &\theta(call)=-\frac{S_0N'(d_1)\sigma}{2\sqrt{T}}-rKe^{-rT}N(d_2)\\
+    &\theta(put)=-\frac{S_0N'(d_1)\sigma}{2\sqrt{T}}+rKe^{-rT}N(-d_2)
+\end{align*}
+where $N'(x)=\frac{1}{\sqrt{2\pi}}e^{-(x^2/2)}$
+\end{definition}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=1]{theta.PNG}
+\end{figure}
+\begin{definition}\textbf{Gamma}\\
+$$
+\Gamma=\frac{\partial^2C}{\partial t^2}=\frac{N'(d_1)}{S_0\sigma\sqrt{T}}
+$$
+To get a Gamma-neutral portfolio, we need
+$$
+-\frac{\Gamma_p}{\Gamma_T}=\textbf{number of options to long}
+$$
+\end{definition}
+\begin{theorem}\textbf{Delta, Theta, Gamma}
+$$
+r\Pi=\theta+rS\Delta+\frac{1}{2}\sigma^2S^2\Gamma
+$$
+\end{theorem}
+\begin{definition}\textbf{Vega}
+$$
+\textbf{Vega}=\frac{\partial C}{\partial\sigma}=S_0N'(d_1)\sqrt{T}
+$$
+most sensitive at the money like Theta.
+\end{definition}
+\begin{definition}\textbf{$\rho$}
+$$
+\rho=\frac{\partial C}{\partial r}
+$$
+for calls, the in-the-money calls and puts are more sensitive to change of risk-free rates than out-of-the-money calls and puts.
+$$
+\rho(C)=KTe^{-rT}N(d_2)\hspace{2cm}\rho(P)=-KTe^{-rT}N(-d_2)
+$$
+\end{definition}
    \chapterimage{stock}
 \chapter{Prices, Discount Factors, and Arbitrage}
-
    \chapterimage{stock}
 \chapter{Spot, Forward, and Par Rates}
 
@@ -1933,7 +2002,47 @@ one option contract is needed for each $\Delta$ stock
 
    \chapterimage{stock}
 \chapter{Capital Structure in Banks}
-
+\begin{definition}\textbf{Expected Loss}
+$$
+EL=EA\times PD\times LR=EA\times PD\times (1-RR)
+$$
+\end{definition}
+\begin{definition}\textbf{Unexpected Loss}
+For the horizon $H$, the asset with value $V_H$ has $UL_{H}=\sqrt{var(V_H)}$. And
+$$
+UL=EA\times\sqrt{PD\times\sigma_{LR}^2+LR^2\times\sigma_{PD}^2}
+$$
+where $\sigma_{PD}^2=PD(1-PD)$ due to binomial model
+\end{definition}
+\begin{definition}
+\begin{enumerate}
+    \item Portfolio $EL$ is linear
+    $$
+    EL_p=\sum_{i}EL_i
+    $$
+    \item 
+    $$
+    UL_p=\sqrt{\sum_{i}\sum_{j}\rho_{ij}UL_{i}UL_{j}}
+    $$
+\end{enumerate}
+\end{definition}
+\begin{definition}\textbf{Two-Asset Risk Contribution}
+$$
+RC_1=UL_1\times\frac{UL_1+(\rho_{12}UL_2)}{UL_p}\hspace{2cm}RC_2=UL_2\times\frac{UL_2+(\rho_{12}UL_1)}{UL_p}
+$$
+\end{definition}
+\begin{definition}\textbf{Economic Capital}
+$$
+EC_p=UL_p\times CM
+$$
+\end{definition}
+\begin{remark}\textbf{Bottom-up Risk Measurement Limitations}
+\begin{enumerate}
+    \item Credits are presumed to be illiquid assets
+    \item Credit risk models used in practice only use a one-year estimation horizon
+    \item Other risk components are separated from credit risk and
+\end{enumerate}
+\end{remark}
    \chapterimage{stock}
 \chapter{Operational Risk}
 
