@@ -429,14 +429,14 @@ where $S_T$ is the spot price at maturity and $K$ is the delivery price. \textbf
 \end{theorem}
 \begin{exercise}\textbf{How to use forward contracts to hedge?}
 
-Suppose that a company based in the United States will receive a payment o f €10M in
+Suppose that a company based in the United States will receive a payment o f EUR10M in
 three months. The company is worried that the euro will depreciate and is contemplating
 using a forward contract to hedge this risk. Compute the following:
 \begin{enumerate}
-    \item The value of the €10M in U.S. dollars at maturity given that the company hedges the
-exchange rate risk with a forward contract at 1.25 \$/\EUR{}.
-    \item The value o f the €10M in U .S. dollars at maturity given that the company did not
-hedge the exchange rate risk and the spot rate at maturity is 1.2 \$/\EUR{}.
+    \item The value of the EUR10M in U.S. dollars at maturity given that the company hedges the
+exchange rate risk with a forward contract at 1.25 \$/\textbf{EUR}.
+    \item The value o f the EUR10M in U .S. dollars at maturity given that the company did not
+hedge the exchange rate risk and the spot rate at maturity is 1.2 \$/\textbf{EUR}.
 \end{enumerate}
 \end{exercise}
 
@@ -1900,7 +1900,7 @@ one option contract is needed for each $\Delta$ stock
      $$
      \item Calculate the variance and SD of the continuously compounded returns
      $$
-     \sigma^2=\frac{\sum_{i=1}^N(R_{i}-\Bar{R})^2}{N-1}
+     \sigma^2=\frac{\sum_{i=1}^N(R_{i}-\bar{R})^2}{N-1}
      $$
  \end{enumerate}
  \end{definition}
@@ -2045,7 +2045,89 @@ $$
 \end{remark}
    \chapterimage{stock}
 \chapter{Operational Risk}
+\begin{definition}\textbf{Operational Risk}
+    \begin{itemize}
+        \item Financial risk that is not caused by market risk
+        \item Any risk developing from a breakdown in normal operations
+        \item Any risk from internal sources
+        \item Direct or indirect losses that result from ineffective or insufficient systems
+        \item Legal risk, but not reputational risk or strategic risk since hard to quantify
+    \end{itemize}
+    \begin{quotation}
+        The risk of direct and indirect loss resulting from inadequate or failed internal processes, people, and systems or from external events.
+    \end{quotation}
+\end{definition}
+\begin{definition}[Methods to Calculate Regulatory Capital]
+    \textbf{}\\
+    \begin{enumerate}
+        \item \textbf{Basic Indicator Approach}: operational risk capital is based on 15\% of the bank's annual gross income over a 3-year period
+        \item \textbf{Standardized Approach}: 8 Business line weighted total of operational risk using gross income over a 3-year period
+        \begin{center}
+            \begin{tabular}{c|c}
+                Investment Banking (corporate finance)&18\%\\
+                Investment Banking (trading and sales)&18\%\\
+                Retail banking&12\%\\
+                Commercial banking&15\%\\
+                Settlement and payment services&18\%\\
+                Agency and custody services&15\%\\
+                Retail brokerage&12\%\\
+                Asset Management&12\%\\
+            \end{tabular}
+        \end{center}
+        Basel Committee recommended in order to use the standardized approach
+        \begin{itemize}
+            \item have an operational risk management function that is able to identify, assess, monitor, and control this type of risk
+            \item Document losses for each business line
+            \item report opertional risk losses on a regular basis
+            \item have a system taht has the appropriate level of documentation
+            \item conduct independent audits with both internal and external audits
+        \end{itemize}
+        \item \textbf{Advanced Measurement Approach}: also need to approximate unexpected loss, confidence level of 99.9\% over a 1 year-time horizon for operational VaR
+    \end{enumerate}
+\end{definition}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.8]{AMA.png}
+    \caption{Operational VaR and Loss Distribution}
+\end{figure}
+\begin{definition}[Operational Risk Categories]
 
+    \begin{enumerate}
+        \item Clients, products, and business prctices.
+        \item Internal fraud
+        \item External fraud
+        \item Damage to physical assets
+        \item Execution, delivery, and process management
+        \item Business disruption and system failures
+        \item Employment practives and workplace safety
+    \end{enumerate}
+\end{definition}
+\begin{remark} 
+    \begin{enumerate}
+        \item It is very common to use \textbf{Poisson Distribution} to estimate loss frequency.
+        \item \textbf{RCSA} risk and control self assessment program is to survey those mangers directly responsible for the operations of the various business 
+        lines
+        \item \textbf{KRI} key risk indicators is helpful when attempting to identify operational risks when factor has a predictive relationship 
+        to losses and be accessible and measurable in a timely fashion 
+    \end{enumerate}
+\end{remark}
+\begin{theorem}[Firm Size Scale Adjustment]
+
+How to use other firms as benchmark 
+$$
+\textbf{Estimated Loss}_Y=\textbf{External Loss}_Z\times\left(\frac{\textbf{revenue}_Y}{\textbf{revenue}_Z}\right)^{0.23}
+$$    
+\end{theorem}
+\begin{definition}[Scorecard Data]\textbf{}\\
+Scorecard Data approach is to survey each type of risk     
+\end{definition}
+\begin{theorem}[The Power Law]\textbf{}\\
+    Since operational risk losses are likely to occur in thee tails 
+    $$
+    P(V>X)=K\times X^{-\alpha}
+    $$
+    where $V$ is the loss variable, $X$ is some large value of $V$ in the tail and $K,\alpha$ are constants.
+\end{theorem}
    \chapterimage{stock}
 \chapter{Governance Over Stress Testing}
 
