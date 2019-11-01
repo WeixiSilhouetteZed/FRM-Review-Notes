@@ -1,85 +1,85 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {I}{Financial Markets and Products}}{5}{part.1}% 
+\contentsline {part}{\@mypartnumtocformat {I}{Financial Markets and Products}}{7}{part.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Banks}{7}{chapter.1}% 
+\contentsline {chapter}{\numberline {1}Banks}{9}{chapter.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Insurance Companies and Pension Plans}{9}{chapter.2}% 
+\contentsline {chapter}{\numberline {2}Insurance Companies and Pension Plans}{11}{chapter.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Mutual Funds and Hedge Funds}{11}{chapter.3}% 
+\contentsline {chapter}{\numberline {3}Mutual Funds and Hedge Funds}{13}{chapter.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Option, Futures, and Other Derivatives}{13}{chapter.4}% 
+\contentsline {chapter}{\numberline {4}Option, Futures, and Other Derivatives}{15}{chapter.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Mechanics of Futures Markets}{15}{chapter.5}% 
+\contentsline {chapter}{\numberline {5}Mechanics of Futures Markets}{17}{chapter.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Hedging Strategies Using Futures}{19}{chapter.6}% 
+\contentsline {chapter}{\numberline {6}Hedging Strategies Using Futures}{21}{chapter.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Interest Rates}{21}{chapter.7}% 
+\contentsline {chapter}{\numberline {7}Interest Rates}{23}{chapter.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Determination of Forward and Future Prices}{23}{chapter.8}% 
+\contentsline {chapter}{\numberline {8}Determination of Forward and Future Prices}{25}{chapter.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Interest Rate Futures}{25}{chapter.9}% 
+\contentsline {chapter}{\numberline {9}Interest Rate Futures}{27}{chapter.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Swaps}{29}{chapter.10}% 
+\contentsline {chapter}{\numberline {10}Swaps}{31}{chapter.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Mechanics of Option Markets}{31}{chapter.11}% 
+\contentsline {chapter}{\numberline {11}Mechanics of Option Markets}{33}{chapter.11}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Properties of Stock Options}{33}{chapter.12}% 
+\contentsline {chapter}{\numberline {12}Properties of Stock Options}{35}{chapter.12}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}Trading Strategies Involving Options}{35}{chapter.13}% 
+\contentsline {chapter}{\numberline {13}Trading Strategies Involving Options}{37}{chapter.13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {14}Exotic Options}{37}{chapter.14}% 
+\contentsline {chapter}{\numberline {14}Exotic Options}{39}{chapter.14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {15}Commodity Forwards and Futures}{39}{chapter.15}% 
+\contentsline {chapter}{\numberline {15}Commodity Forwards and Futures}{41}{chapter.15}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {16}Exchanges, OTC, Derivatives, DPCs and SPVs}{43}{chapter.16}% 
+\contentsline {chapter}{\numberline {16}Exchanges, OTC, Derivatives, DPCs and SPVs}{45}{chapter.16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {17}Basic Principles of Central Clearing}{45}{chapter.17}% 
+\contentsline {chapter}{\numberline {17}Basic Principles of Central Clearing}{47}{chapter.17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {18}Risks Caused by CCPs}{47}{chapter.18}% 
+\contentsline {chapter}{\numberline {18}Risks Caused by CCPs}{49}{chapter.18}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {19}Foreign Exchange Risk}{49}{chapter.19}% 
+\contentsline {chapter}{\numberline {19}Foreign Exchange Risk}{51}{chapter.19}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {20}Corporate Bonds}{51}{chapter.20}% 
+\contentsline {chapter}{\numberline {20}Corporate Bonds}{53}{chapter.20}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {21}Mortgages and MBS}{53}{chapter.21}% 
+\contentsline {chapter}{\numberline {21}Mortgages and MBS}{55}{chapter.21}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {II}{Valuation and Risk Models}}{55}{part.2}% 
+\contentsline {part}{\@mypartnumtocformat {II}{Valuation and Risk Models}}{57}{part.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {22}Quantifying Volatility in VaR Models}{57}{chapter.22}% 
+\contentsline {chapter}{\numberline {22}Quantifying Volatility in VaR Models}{59}{chapter.22}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {23}Putting VaR to Work}{63}{chapter.23}% 
+\contentsline {chapter}{\numberline {23}Putting VaR to Work}{65}{chapter.23}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {24}Measures of Financial Risk}{65}{chapter.24}% 
+\contentsline {chapter}{\numberline {24}Measures of Financial Risk}{67}{chapter.24}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {25}Binomial Trees}{67}{chapter.25}% 
+\contentsline {chapter}{\numberline {25}Binomial Trees}{69}{chapter.25}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {26}The Black-Scholes-Merton Model}{69}{chapter.26}% 
+\contentsline {chapter}{\numberline {26}The Black-Scholes-Merton Model}{71}{chapter.26}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {27}The Greek Letters}{73}{chapter.27}% 
+\contentsline {chapter}{\numberline {27}The Greek Letters}{75}{chapter.27}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {28}Prices, Discount Factors, and Arbitrage}{77}{chapter.28}% 
+\contentsline {chapter}{\numberline {28}Prices, Discount Factors, and Arbitrage}{79}{chapter.28}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {29}Spot, Forward, and Par Rates}{79}{chapter.29}% 
+\contentsline {chapter}{\numberline {29}Spot, Forward, and Par Rates}{81}{chapter.29}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {30}Returns, Spreads, and Yields}{81}{chapter.30}% 
+\contentsline {chapter}{\numberline {30}Returns, Spreads, and Yields}{83}{chapter.30}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {31}One-Factor Risk Metrics and Hedges}{83}{chapter.31}% 
+\contentsline {chapter}{\numberline {31}One-Factor Risk Metrics and Hedges}{85}{chapter.31}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {32}Multi-Factor Risk Metrics and Hedges}{85}{chapter.32}% 
+\contentsline {chapter}{\numberline {32}Multi-Factor Risk Metrics and Hedges}{87}{chapter.32}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {33}Country Risk}{87}{chapter.33}% 
+\contentsline {chapter}{\numberline {33}Country Risk}{89}{chapter.33}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {34}External and Internal Ratings}{89}{chapter.34}% 
+\contentsline {chapter}{\numberline {34}External and Internal Ratings}{91}{chapter.34}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {35}Capital Structure in Banks}{91}{chapter.35}% 
+\contentsline {chapter}{\numberline {35}Capital Structure in Banks}{93}{chapter.35}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {36}Operational Risk}{93}{chapter.36}% 
+\contentsline {chapter}{\numberline {36}Operational Risk}{95}{chapter.36}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {37}Governance Over Stress Testing}{97}{chapter.37}% 
+\contentsline {chapter}{\numberline {37}Governance Over Stress Testing}{99}{chapter.37}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {38}Stress Testing}{99}{chapter.38}% 
+\contentsline {chapter}{\numberline {38}Stress Testing}{101}{chapter.38}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {39}Principles for Sound Stress Testing}{101}{chapter.39}% 
+\contentsline {chapter}{\numberline {39}Principles for Sound Stress Testing}{103}{chapter.39}% 
 \contentsfinish 
