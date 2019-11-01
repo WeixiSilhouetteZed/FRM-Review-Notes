@@ -1990,7 +1990,58 @@ $$
 
    \chapterimage{stock}
 \chapter{One-Factor Risk Metrics and Hedges}
-
+\begin{definition}[DV01]\textbf{}\\
+    $$
+    DV01=-\frac{\Delta BV}{10000\times \Delta y}
+    $$
+\end{definition}
+\begin{theorem}[Application to Hedging]\textbf{}\\
+$$
+HR=\frac{DV01 (\textbf{per 100 of initial position})}{DV01 (\textbf{ per 100 of hedging instrument})}
+$$
+\end{theorem}
+\begin{definition}[Duration]\textbf{}\\
+\begin{enumerate}
+    \item Macualy Duration and Modfied Duration
+    $$
+    D^*=\frac{D}{1+y}\hspace{2cm}D^*=\frac{1}{BV}\frac{\Delta BV}{\Delta y}
+    $$
+    \item Effective Duration for callable and putable bonds 
+    $$
+    D_e=\frac{BV_{-\Delta y}-BV_{+\Delta y}}{2\times BV_0\times\Delta y}
+    $$
+\end{enumerate}    
+\end{definition}
+\begin{remark}
+    DV01 is more useful when conducting quantitative hedging but duration is more convenient
+    when just alerting investors.
+\end{remark}
+\begin{definition}[Convexity]\textbf{}\\
+    $$
+    C=\frac{1}{BV}\frac{d^2BV}{dy^2}
+    $$
+    too much work, we can use the approximated version
+    $$
+    C_{approx}=\frac{BV_{-\Delta y}+BV_{+\Delta y}-2\times BV_0}{2\times BV_0\times\Delta y^2}
+    $$
+\end{definition}
+\begin{theorem}[Portfolio Duration]\textbf{}\\
+    $$
+    D_p=\sum_{j=1}^Kw_j\times D_j
+    $$
+\end{theorem}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.7]{Bendover.png}
+    \caption{Callable Bond's Yield Curve}
+\end{figure}
+\begin{definition}[Barbell Portfolio]\textbf{}\\
+    A barbell strategy is typically used when an investment manager uses bonds with short and
+    long maturities, thus forgoing any bonds concentrated in the intermediate maturity
+    range. This is preferred over bullet portfolio when the portfolio manager thinks
+    the interest rate is volatile. \textbf{This requires the sum of PV to be the same
+    and the duration of the portfolio matches the bullet portfolio}
+\end{definition}
    \chapterimage{stock}
 \chapter{Multi-Factor Risk Metrics and Hedges}
 
