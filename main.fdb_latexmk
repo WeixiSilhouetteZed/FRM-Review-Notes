@@ -1,15 +1,15 @@
 # Fdb version 3
-["biber main"] 1573528987 "main.bcf" "main.bbl" "main" 1573529172
-  "main.bcf" 1573529172 99048 19281225ce74b237589a480375dba79b "pdflatex"
+["biber main"] 1573528987 "main.bcf" "main.bbl" "main" 1573532843
+  "main.bcf" 1573532843 99048 19281225ce74b237589a480375dba79b "pdflatex"
   (generated)
-  "main.bbl"
   "main.blg"
-["makeindex main.idx"] 1573528987 "main.idx" "main.ind" "main" 1573529172
-  "main.idx" 1573529167 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.bbl"
+["makeindex main.idx"] 1573528987 "main.idx" "main.ind" "main" 1573532843
+  "main.idx" 1573532837 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
-["pdflatex"] 1573529164 "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex" "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.pdf" "main" 1573529172
+["pdflatex"] 1573532834 "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex" "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.pdf" "main" 1573532843
   "AMA.png" 1572564897 88540 f7e0d952c49aa0d4c1787517ad22217c ""
   "Bendover.png" 1572572786 252056 ca9c9cabb80892957db635a5945ce61b ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458470287 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -237,8 +237,8 @@
   "Central.png" 1571883302 123045 7db3532b74796fcfd028379e88ee08cf ""
   "PSA.png" 1572564883 299075 f7297f646b5e35327f75eae75c3daa36 ""
   "VarRed.png" 1573525768 75350 327b3c707650f92738c6f5539c7ca7cc ""
-  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.aux" 1573529172 44640 dcb05f1f3fd556a4f1840cf7afdb39e8 ""
-  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex" 1573529163 101935 dc4cb835b45a0b723ac88f8443a54b6c ""
+  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.aux" 1573532843 44640 dcb05f1f3fd556a4f1840cf7afdb39e8 ""
+  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.tex" 1573532833 102889 067218b73567f82bc1abcfce08dca51c ""
   "clearing.png" 1571883722 180585 dc56f40e19fc9cfc911f240ae44e0b65 ""
   "commfor.PNG" 1571882483 130981 b58957151e334fd8d4b00b191ac2c7c2 ""
   "delta.PNG" 1572564897 60299 77523ac83e91c8dc10892c4060318d61 ""
@@ -246,13 +246,13 @@
   "exponential.PNG" 1572146568 69785 e310dc8d95e73e98ee1d6309890988c5 ""
   "gasoline.PNG" 1571882483 70744 8bef75f2daf0de0fec79959aadd104d1 ""
   "hybrid.PNG" 1572146568 121237 41eeca8903f2b02c9380e20c52e55e2a ""
-  "main.aux" 1573529172 44640 dcb05f1f3fd556a4f1840cf7afdb39e8 "pdflatex"
+  "main.aux" 1573532843 44640 dcb05f1f3fd556a4f1840cf7afdb39e8 "pdflatex"
   "main.bbl" 1573528990 486 f7f239c736cf01ac6ce7bd829f9b3c7b "biber main"
   "main.ind" 1573528987 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.ptc" 1573529172 5451 5b275adf38d36ea5941e0c94ddbff5bb "pdflatex"
-  "main.run.xml" 1573529172 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
-  "main.tex" 1573529163 101935 dc4cb835b45a0b723ac88f8443a54b6c ""
-  "main.toc" 1573529172 5323 54b32dfc03d7a7bd8c99289b4d3b63fe "pdflatex"
+  "main.ptc" 1573532843 5451 5b275adf38d36ea5941e0c94ddbff5bb "pdflatex"
+  "main.run.xml" 1573532843 2307 fa280d158a7733084a6a66e2106e4193 "pdflatex"
+  "main.tex" 1573532833 102889 067218b73567f82bc1abcfce08dca51c ""
+  "main.toc" 1573532843 5323 54b32dfc03d7a7bd8c99289b4d3b63fe "pdflatex"
   "optionstrat.PNG" 1572564883 129556 50c5f7773821e4bc408e11558f6a63cd ""
   "probability.jpg" 1572146568 105133 bac599cc347daf0d2073265ac0469b91 ""
   "stock.png" 1572146568 244445 75c368853c4a2362e420636fa245fad4 ""
@@ -262,13 +262,13 @@
   "titlepage.pdf" 1572146568 172113 ec644aadda71decf1ba9a2c4efc780da ""
   "uloption.PNG" 1571697672 46883 77090418d1d3aa8a4512e513b4104a7f ""
   (generated)
-  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.log"
-  "main.ptc"
-  "main.log"
-  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.pdf"
   "main.idx"
-  "main.bcf"
-  "main.aux"
-  "main.toc"
+  "main.ptc"
   "main.run.xml"
+  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.log"
+  "main.toc"
   "main.pdf"
+  "c:/Users/billz/OneDrive - University of Waterloo/Desktop/Profession Examination/FRM/Notes/FRM-Review-Notes/main.pdf"
+  "main.bcf"
+  "main.log"
+  "main.aux"
