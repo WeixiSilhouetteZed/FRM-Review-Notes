@@ -1984,7 +1984,35 @@ $$
 \chapter{Prices, Discount Factors, and Arbitrage}
    \chapterimage{stock}
 \chapter{Spot, Forward, and Par Rates}
-
+\begin{definition}[Holding Period Return]\textbf{}\\
+    $$
+    r=m\left[\left(\frac{FV_n}{PV_0}\right)^{\frac{1}{m\times n}}-1\right]
+    $$
+\end{definition}
+\begin{definition}[Swap Rate]\textbf{}\\
+    Given swap rate table
+    \begin{center}
+        \begin{tabular}{c|c}
+            Maturity&Swap Rates\\
+            $0.5$&$s_1$\\
+            $1.0$&$s_2$\\
+        \end{tabular}
+    \end{center}
+    we have
+    $$
+    \left(1+\frac{s_1}{2}\right)d(0.5)=1
+    $$
+    and
+    $$
+    \left(\frac{s_2}{2}\right)d(0.5)+\left(1+\frac{s_2}{2}\right)d(1.0)=1
+    $$
+\end{definition}
+\begin{definition}[Par Rate]\textbf{}\\
+    The par rate at maturity is the rate at which the present value of a bond equals its par value (in fact they are swap rates)
+    $$
+    \frac{P_T}{2}\times\sum_{t=1}^{2T}d\left(\frac{t}{2}\right)+d(T)=1
+    $$
+\end{definition}
    \chapterimage{stock}
 \chapter{Returns, Spreads, and Yields}
 
@@ -2196,15 +2224,77 @@ Scorecard Data approach is to survey each type of risk
             \item regularly report tot he board of directors on stress testing results 
         \end{itemize}
     \end{enumerate}
-    
 \end{definition}
    \chapterimage{stock}
 \chapter{Stress Testing}
 
    \chapterimage{stock}
 \chapter{Principles for Sound Stress Testing}
-
- 
+\part{Additional Information}
+\chapter{Question Findings}
+\begin{enumerate}
+    \item Both AR and ARMA are good at forecasting with seasonal patterns because they both
+    both involve lagged observable variables, which are best for capturing a relationships
+    in motion. It is the moving average representation that is best at capturing only
+    random movements
+    \item Penalty factors for MSE:
+    $$
+    \begin{cases}
+        s^2&\frac{T}{T-k}\\
+        AIC&e^{\frac{2k}{T}}\\
+        SIC&T^{(k/T)}
+    \end{cases}
+    $$
+    $SIC$ has the largest penalty factor.
+    \item For dummy variables of forecasting, we only need $n-1$
+    \item Including the full set of dummy variables and an intercepts term wouldproduce a forecasting
+    model that exhibits perfect multicollinearity.
+    \item Geometric Brownian Motion: 
+    $$
+    \Delta S_t=S_t(\mu\Delta t+\sigma\epsilon\sqrt{\Delta t})
+    $$
+    or say
+    $$
+    S_{t+1}=S_t(1+\mu\Delta t+\sigma\epsilon\sqrt{\Delta t})
+    $$
+    \item The standard error estimate of a Monte Carlo simulation can be 
+    reduced by a factor of 10 by increasing $N$ by a factor of $100$
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[scale=0.9]{VarRed.png}
+    \end{figure}
+    \item Monte Carlo simulation is suitable for pricing options in each case except when early exercise of the option isw
+    possible. 
+    \item Short option positions have long left tails, which makes it more difficult to estimate
+    a left-tailed quantile precisely. 
+    \item Boostrap: $S_{t+1}=S_t(1+R_{m(1)})$
+    \begin{itemize}
+        \item Advantages: can include fat tails, jumps, or any departure from the normal distribution
+        Account for  correlations across series because one draw consists of the simultaneous returns
+        for $N$ series, such as stock, bonds, and currency prices.
+        \item Limitations: for small sample sizes, it may be a poor approximation of the 
+        actual one; replies heavily on the assumption that returns are independent
+    \end{itemize}
+    \item GARCH model allows  for time-varying volatility by describing the conditional variance as a function
+    the previous period's volatility and the most recent variance estimate; it is good
+    for simulating leptokertic return distributions with fat tails; the EWMA is a Special
+    case of the GARCH model
+    \item Correlation Estimateion
+    $$
+    \hat{\rho_{XY}}=\frac{cov_n}{\sigma_{x,n}\sigma_{y,n}}
+    $$
+    $$
+    cov_n=\lambda cov_{n-1}+(1-\lambda)x_{n-1}y_{n-1}=\omega+\alpha x_{n-1}y_{n-1}+\beta cov_{n-1}
+    $$
+    \item The GARCH model will take the shortest time to revert to its mean is the model withdrawals
+    the lowest persistence $\alpha+\beta$
+    \item When calculating rate of return using EWMA, make sure use continuous compounding
+    \item GARCH model is stable when the persistence $\alpha+\beta<1$
+    \item EWMA only cares about most recent variance, the weighting for long-run average variance
+    is zero.
+    \item The EWMA estimate of varaince is a weighted average of the average of the prior
+    day's variance and prior day squared return
+\end{enumerate}
  
  
  
